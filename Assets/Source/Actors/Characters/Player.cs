@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using Assets.Source.Actors.Static;
+using DungeonCrawl.Core;
+using UnityEngine;
 
 namespace DungeonCrawl.Actors.Characters
 {
@@ -28,6 +30,17 @@ namespace DungeonCrawl.Actors.Characters
             {
                 // Move right
                 TryMove(Direction.Right);
+            }
+
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                // Pick up or interact
+                Item item = ActorManager.Singleton.GetActorAt<Item>(Position);
+                if (item != null)
+                {
+                    Debug.Log(item.DefaultName);
+                    ActorManager.Singleton.DestroyActor(item);
+                }
             }
         }
 
