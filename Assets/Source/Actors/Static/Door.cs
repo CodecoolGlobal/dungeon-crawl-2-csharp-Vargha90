@@ -1,4 +1,5 @@
 ﻿using DungeonCrawl.Actors;
+using DungeonCrawl.Actors.Characters;
 
 namespace Assets.Source.Actors.Static
 {
@@ -15,6 +16,10 @@ namespace Assets.Source.Actors.Static
 
         public override bool OnCollision(Actor anotherActor)
         {
+            if (anotherActor.GetType() == typeof(Player))
+            {
+                OpenDoor();
+            }
             return _open;
         }
 

@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="DungeonCrawl.Utilities" Collapsed="true">
+    <Position X="18.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Source\Utilities.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DungeonCrawl.Actors.Actor" Collapsed="true">
+    <Position X="8" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAgAAgAAABAAAgAAAAACAAAAAAAAAAIIAAgAEAAkE=</HashCode>
+      <FileName>Assets\Source\Actors\Actor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DungeonCrawl.Actors.Characters.Character" Collapsed="true">
+    <Position X="8" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAAAAAAAAAAAIAAAEAAAAAAAAAAAAAAAAE=</HashCode>
+      <FileName>Assets\Source\Actors\Characters\Character.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DungeonCrawl.Actors.Characters.Player" Collapsed="true">
+    <Position X="7" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAAAAAAAAAAAAIAAAAAAAAAAIIAAAAEAAAA=</HashCode>
+      <FileName>Assets\Source\Actors\Characters\Player.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DungeonCrawl.Actors.Characters.Skeleton" Collapsed="true">
+    <Position X="9.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAAAAAAAAAAAAIAAAAAAAAAAIIAAAAAAAAA=</HashCode>
+      <FileName>Assets\Source\Actors\Characters\Skeleton.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DungeonCrawl.Actors.Static.Floor" Collapsed="true">
+    <Position X="5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAAAAAAAAAAAACAAAAAAAAAAAIAAAAAAAAA=</HashCode>
+      <FileName>Assets\Source\Actors\Static\Floor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DungeonCrawl.Actors.Static.Wall" Collapsed="true">
+    <Position X="10.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAIIAAAAAAAAA=</HashCode>
+      <FileName>Assets\Source\Actors\Static\Wall.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DungeonCrawl.Core.ActorManager" Collapsed="true">
+    <Position X="16.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAEAAAAAEAIBAAAAAAAAEAAAAAAQAgAEA=</HashCode>
+      <FileName>Assets\Source\Core\ActorManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DungeonCrawl.Core.CameraController" Collapsed="true">
+    <Position X="16.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAgAAAAAAAAAAAAAAEAAAAAgCAAAEA=</HashCode>
+      <FileName>Assets\Source\Core\CameraController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DungeonCrawl.Core.GameManager" Collapsed="true">
+    <Position X="16.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Source\Core\GameManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DungeonCrawl.Core.MapLoader" Collapsed="true">
+    <Position X="16.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAIAAAAAEAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Source\Core\MapLoader.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Assets.Source.Core.UserInterface" Collapsed="true">
+    <Position X="18.5" Y="2.75" Width="1.5" />
+    <NestedTypes>
+      <Enum Name="Assets.Source.Core.UserInterface.TextPosition" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Assets\Source\Core\UserInterface.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAAAAIAAAAAAAAAAAAEAAAAAAAAAAEA=</HashCode>
+      <FileName>Assets\Source\Core\UserInterface.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Assets.Source.Actors.Static.Door" Collapsed="true">
+    <Position X="3" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAAAIAAAAAAABAAAAAAAAAAAIIAIAAAAAAE=</HashCode>
+      <FileName>Assets\Source\Actors\Static\Door.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Assets.Source.Actors.Static.Item" Collapsed="true">
+    <Position X="13.75" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAE=</HashCode>
+      <FileName>Assets\Source\Actors\Static\Item.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="DungeonCrawl.Direction" Collapsed="true">
+    <Position X="16.75" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAACACAAAAAAAI=</HashCode>
+      <FileName>Assets\Source\Utilities.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
