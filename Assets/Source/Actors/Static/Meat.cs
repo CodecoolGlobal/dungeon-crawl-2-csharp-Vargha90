@@ -2,7 +2,7 @@
 
 namespace Assets.Source.Actors.Static
 {
-    internal class Meat : Item
+    public sealed class Meat : Item
     {
         public override int DefaultSpriteId => 945;
 

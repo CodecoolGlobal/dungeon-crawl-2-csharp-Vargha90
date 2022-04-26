@@ -2,7 +2,7 @@
 
 namespace Assets.Source.Actors.Static
 {
-    internal class Key : Item
+    public sealed class Key : Item
     {
         public override int DefaultSpriteId => 559;
 
