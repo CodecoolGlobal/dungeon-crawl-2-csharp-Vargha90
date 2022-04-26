@@ -1,5 +1,4 @@
 ﻿using DungeonCrawl.Actors;
-using DungeonCrawl.Actors.Static;
 
 namespace Assets.Source.Actors.Static
 {
