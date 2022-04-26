@@ -29,6 +29,12 @@ namespace DungeonCrawl.Actors.Characters
                 // Move right
                 TryMove(Direction.Right);
             }
+
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                // Pick up or interact
+                Debug.Log("I'm doing something!");
+            }
         }
 
         public override bool OnCollision(Actor anotherActor)
