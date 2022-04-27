@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using DungeonCrawl;
 using DungeonCrawl.Actors;
 using DungeonCrawl.Actors.Characters;
+using DungeonCrawl.Actors.Static;
 using DungeonCrawl.Core;
 using UnityEngine;
 using Random = System.Random;
@@ -48,21 +49,66 @@ namespace Assets.Source.Actors.Characters
             {
                 if (spiderPosition.x < playerPosition.x)
                 {
-                    TryMove(Direction.Right);
+                    (int x, int y) targetPosition = (Position.x + 1, Position.y);
+                    if (CheckTargetPosition(targetPosition) is Wall ||
+                        CheckTargetPosition(targetPosition) is Skeleton)
+                    {
+                        Direction direction = spiderPosition.y < playerPosition.y ? Direction.Up : Direction.Down;
+                        TryMove(direction);
+                    } 
+                    else
+                    {
+                        TryMove(Direction.Right);
+                    }
                 }
                 else if (spiderPosition.x > playerPosition.x)
                 {
-                    TryMove(Direction.Left);
+                    (int x, int y) targetPosition = (Position.x - 1, Position.y);
+                    if (CheckTargetPosition(targetPosition) is Wall ||
+                        CheckTargetPosition(targetPosition) is Skeleton)
+                    {
+                        Direction direction = spiderPosition.y < playerPosition.y ? Direction.Up : Direction.Down;
+                        TryMove(direction);
+                    }
+                    else
+                    {
+                        TryMove(Direction.Left);
+                    }
                 }
                 else if (spiderPosition.y < playerPosition.y)
                 {
-                    TryMove(Direction.Up);
+                    (int x, int y) targetPosition = (Position.x, Position.y + 1);
+                    if (CheckTargetPosition(targetPosition) is Wall ||
+                        CheckTargetPosition(targetPosition) is Skeleton)
+                    {
+                        Direction direction = spiderPosition.x < playerPosition.x ? Direction.Right : Direction.Left;
+                        TryMove(direction);
+                    }
+                    else
+                    {
+                        TryMove(Direction.Up);
+                    }
                 }
                 else if (spiderPosition.y > playerPosition.y)
                 {
-                    TryMove(Direction.Down);
+                    (int x, int y) targetPosition = (Position.x, Position.y - 1);
+                    if (CheckTargetPosition(targetPosition) is Wall ||
+                        CheckTargetPosition(targetPosition) is Skeleton)
+                    {
+                        Direction direction = spiderPosition.y < playerPosition.y ? Direction.Right : Direction.Left;
+                        TryMove(direction);
+                    }
+                    else
+                    {
+                        TryMove(Direction.Down);
+                    }
                 }
             }
+        }
+
+        private Actor CheckTargetPosition((int x, int y) position)
+        {
+            return ActorManager.Singleton.GetActorAt(position);
         }
 
         protected override void TryMove(Direction direction)
