@@ -6,6 +6,7 @@ namespace DungeonCrawl.Actors.Characters
 {
     public class Player : Character
     {
+        public (int x, int y) PlayerPosition { get => PlayerPosition; private set => PlayerPosition = value; }
         protected override void OnUpdate(float deltaTime)
         {
             if (Input.GetKeyDown(KeyCode.W))
@@ -36,6 +37,7 @@ namespace DungeonCrawl.Actors.Characters
             {
                 // Pick up or interact
                 Item item = ActorManager.Singleton.GetActorAt<Item>(Position);
+                PlayerPosition = item.Position;
                 if (item != null)
                 {
                     Debug.Log(item.DefaultName);

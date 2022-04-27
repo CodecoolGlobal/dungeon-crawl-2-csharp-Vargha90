@@ -12,6 +12,7 @@ namespace DungeonCrawl.Core
     /// </summary>
     public static class MapLoader
     {
+       private static (int x, int y) _playerPosition;
         /// <summary>
         ///     Constructs map from txt file and spawns actors at appropriate positions
         /// </summary>
@@ -36,10 +37,11 @@ namespace DungeonCrawl.Core
                     SpawnActor(character, (x, -y));
                 }
             }
-
             // Set default camera size and position
-            CameraController.Singleton.Size = 10;
-            CameraController.Singleton.Position = (width / 2, -height / 2);
+            CameraController.Singleton.Size = 6;
+            CameraController.Singleton.Position = (_playerPosition.x , _playerPosition.y);
+            Debug.Log(_playerPosition.x);
+            Debug.Log(_playerPosition.y);
         }
 
         private static void SpawnActor(char c, (int x, int y) position)
@@ -54,6 +56,7 @@ namespace DungeonCrawl.Core
                     break;
                 case 'p':
                     ActorManager.Singleton.Spawn<Player>(position);
+                    _playerPosition = position;
                     ActorManager.Singleton.Spawn<Floor>(position);
                     break;
                 case 's':
