@@ -6,6 +6,12 @@ namespace DungeonCrawl.Actors.Characters
     {
         public int Health { get; private set; }
 
+        protected override void Awake()
+        {
+            base.Awake();
+            Health = 30;
+        }
+
         public void ApplyDamage(int damage)
         {
             Health -= damage;

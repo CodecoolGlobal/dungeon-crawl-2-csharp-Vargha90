@@ -1,4 +1,5 @@
 ﻿using Assets.Source.Actors.Static;
+using Assets.Source.Core;
 using DungeonCrawl.Core;
 using UnityEngine;
 
@@ -8,10 +9,12 @@ namespace DungeonCrawl.Actors.Characters
     {
         protected override void OnUpdate(float deltaTime)
         {
+            UserInterface.Singleton.SetText("Health: " + Health.ToString(), UserInterface.TextPosition.TopLeft);
             if (Input.GetKeyDown(KeyCode.W))
             {
                 // Move up
                 TryMove(Direction.Up);
+                Debug.Log(Health);
             }
 
             if (Input.GetKeyDown(KeyCode.S))
@@ -46,6 +49,10 @@ namespace DungeonCrawl.Actors.Characters
 
         public override bool OnCollision(Actor anotherActor)
         {
+            if (anotherActor is Skeleton)
+            {
+                ApplyDamage(2);
+            }
             return false;
         }
 

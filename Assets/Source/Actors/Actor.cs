@@ -1,4 +1,6 @@
-﻿using DungeonCrawl.Core;
+﻿using System.Security.Cryptography.X509Certificates;
+using DungeonCrawl.Actors.Characters;
+using DungeonCrawl.Core;
 using UnityEngine;
 
 namespace DungeonCrawl.Actors
@@ -18,7 +20,7 @@ namespace DungeonCrawl.Actors
         private (int x, int y) _position;
         private SpriteRenderer _spriteRenderer;
 
-        private void Awake()
+        protected virtual void Awake()
         {
             _spriteRenderer = GetComponent<SpriteRenderer>();
 
@@ -39,8 +41,10 @@ namespace DungeonCrawl.Actors
         {
             var vector = direction.ToVector();
             (int x, int y) targetPosition = (Position.x + vector.x, Position.y + vector.y);
+            (int x, int y) currentPosition = (Position.x, Position.y);
 
             var actorAtTargetPosition = ActorManager.Singleton.GetActorAt(targetPosition);
+            var playerActor = ActorManager.Singleton.GetActorAt(currentPosition);
 
             if (actorAtTargetPosition == null)
             {
@@ -49,6 +53,11 @@ namespace DungeonCrawl.Actors
             }
             else
             {
+                if (actorAtTargetPosition is Skeleton)
+                {
+                    playerActor.OnCollision(actorAtTargetPosition);
+                    actorAtTargetPosition.OnCollision(playerActor);
+                }
                 if (actorAtTargetPosition.OnCollision(this))
                 {
                     // Allowed to move

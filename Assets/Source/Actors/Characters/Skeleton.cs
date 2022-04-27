@@ -6,6 +6,7 @@ namespace DungeonCrawl.Actors.Characters
     {
         public override bool OnCollision(Actor anotherActor)
         {
+            ApplyDamage(10);
             return false;
         }
 
