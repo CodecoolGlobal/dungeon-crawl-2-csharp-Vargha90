@@ -33,8 +33,15 @@ namespace DungeonCrawl.Core
                 for (var x = 0; x < width; x++)
                 {
                     var character = line[x];
-
-                    SpawnActor(character, (x, -y));
+                    if ( id == 1)
+                    {
+                        SpawnActor(character, (x, -y));
+                    }
+                    
+                    else
+                    {
+                        SpawnActor2(character, (x, -y));
+                    }
                 }
             }
             // Set default camera size and position
@@ -79,6 +86,27 @@ namespace DungeonCrawl.Core
                     break;
                 default:
                     throw new ArgumentOutOfRangeException();
+            }
+        }
+
+        private static void SpawnActor2(char c, (int x, int y) position)
+        {
+            switch (c)
+            {
+                case '.':
+                    break;
+                case '#':
+                    break;
+                case '+':
+                    break;
+                case '|':
+                    break;
+                case '*':
+                    break;
+                case '=':
+                    break;
+                case '~':
+                    break;
             }
         }
     }
