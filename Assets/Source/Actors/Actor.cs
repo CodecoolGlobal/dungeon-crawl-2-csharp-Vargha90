@@ -1,4 +1,5 @@
 ﻿using System.Security.Cryptography.X509Certificates;
+using Assets.Source.Actors.Characters;
 using DungeonCrawl.Actors.Characters;
 using DungeonCrawl.Core;
 using UnityEngine;
@@ -53,12 +54,12 @@ namespace DungeonCrawl.Actors
             }
             else
             {
-                if (actorAtTargetPosition is Skeleton)
+                if (actorAtTargetPosition is Skeleton || actorAtTargetPosition is Spider)
                 {
                     playerActor.OnCollision(actorAtTargetPosition);
                     actorAtTargetPosition.OnCollision(playerActor);
                 }
-                if (actorAtTargetPosition.OnCollision(this))
+                else if (actorAtTargetPosition.OnCollision(this))
                 {
                     // Allowed to move
                     Position = targetPosition;

@@ -1,15 +1,19 @@
-﻿using UnityEngine;
+﻿using System;
+using DungeonCrawl.Actors;
+using DungeonCrawl.Actors.Characters;
+using UnityEngine;
 
-namespace DungeonCrawl.Actors.Characters
+namespace Assets.Source.Actors.Characters
 {
-    public class Skeleton : Character
+    internal class Spider : Character
     {
         protected override void Awake()
         {
             base.Awake();
-            SetHealth(30);
+            SetHealth(50);
             SetStrength(5);
         }
+
         public override bool OnCollision(Actor anotherActor)
         {
             ApplyDamage(Strength);
@@ -21,7 +25,7 @@ namespace DungeonCrawl.Actors.Characters
             Debug.Log("Well, I was already dead anyway...");
         }
 
-        public override int DefaultSpriteId => 316;
-        public override string DefaultName => "Skeleton";
+        public override int DefaultSpriteId => 267;
+        public override string DefaultName => "Spider";
     }
 }

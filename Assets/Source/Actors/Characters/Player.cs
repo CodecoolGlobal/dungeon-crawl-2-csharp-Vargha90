@@ -1,4 +1,5 @@
-﻿using Assets.Source.Actors.Static;
+﻿using Assets.Source.Actors.Characters;
+using Assets.Source.Actors.Static;
 using Assets.Source.Core;
 using DungeonCrawl.Core;
 using UnityEngine;
@@ -7,6 +8,12 @@ namespace DungeonCrawl.Actors.Characters
 {
     public class Player : Character
     {
+        protected override void Awake()
+        {
+            base.Awake();
+            SetHealth(100);
+        }
+
         protected override void OnUpdate(float deltaTime)
         {
             UserInterface.Singleton.SetText("Health: " + Health.ToString(), UserInterface.TextPosition.TopLeft);
@@ -14,7 +21,6 @@ namespace DungeonCrawl.Actors.Characters
             {
                 // Move up
                 TryMove(Direction.Up);
-                Debug.Log(Health);
             }
 
             if (Input.GetKeyDown(KeyCode.S))
@@ -51,13 +57,21 @@ namespace DungeonCrawl.Actors.Characters
         {
             if (anotherActor is Skeleton)
             {
-                ApplyDamage(2);
+                SetStrength(2);
+                ApplyDamage(Strength);
+            }
+            else if (anotherActor is Spider)
+            {
+                SetStrength(5);
+                ApplyDamage(Strength);
             }
             return false;
         }
 
         protected override void OnDeath()
         {
+            UserInterface.Singleton.SetText("Health: 0", UserInterface.TextPosition.TopLeft);
+            UserInterface.Singleton.SetText("YOU DIED...", UserInterface.TextPosition.MiddleCenter);
             Debug.Log("Oh no, I'm dead!");
         }
 
