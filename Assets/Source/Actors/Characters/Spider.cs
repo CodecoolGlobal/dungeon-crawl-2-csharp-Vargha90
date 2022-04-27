@@ -26,44 +26,70 @@ namespace Assets.Source.Actors.Characters
                 Input.GetKeyDown(KeyCode.D) ||
                 Input.GetKeyDown(KeyCode.E))
             {
-                TryMove(GetRandomDirection());
+                GetDirectionToMove();
             }
         }
 
-        private Direction GetRandomDirection()
+        private void GetDirectionToMove()
         {
             Random random = new Random();
             Array values = Enum.GetValues(typeof(Direction));
-            Direction randomDirection = (Direction)values.GetValue(random.Next(values.Length));
-            return randomDirection;
+
+            (int x, int y) spiderPosition = (Position.x, Position.y);
+            List<(int x, int y)> aroundSpider = GetCoordinatesAroundSpider(spiderPosition, 2);
+            (int x, int y) playerPosition = GetPlayerPosition(aroundSpider);
+
+            if (spiderPosition == playerPosition)
+            {
+                Direction randomDirection = (Direction)values.GetValue(random.Next(values.Length));
+                TryMove(randomDirection);
+            }
+            else
+            {
+                if (spiderPosition.x < playerPosition.x)
+                {
+                    TryMove(Direction.Right);
+                }
+                else if (spiderPosition.x > playerPosition.x)
+                {
+                    TryMove(Direction.Left);
+                }
+                else if (spiderPosition.y < playerPosition.y)
+                {
+                    TryMove(Direction.Up);
+                }
+                else if (spiderPosition.y > playerPosition.y)
+                {
+                    TryMove(Direction.Down);
+                }
+            }
         }
 
         protected override void TryMove(Direction direction)
         {
             (int x, int y) vector = direction.ToVector();
             (int x, int y) targetPosition = (Position.x + vector.x, Position.y + vector.y);
-            (int x, int y) spiderPosition = (Position.x, Position.y);
-
-            var  aroundSpider = GetCoordinatesAroundSpider(spiderPosition, 2);
-            bool isPlayerAroundMe = CheckIfPlayerInRange(aroundSpider);
-
-            Debug.Log(isPlayerAroundMe);
 
             var actorAtTargetPosition = ActorManager.Singleton.GetActorAt(targetPosition);
-            var self = ActorManager.Singleton.GetActorAt(spiderPosition);
+
+            if (actorAtTargetPosition == null)
+            {
+                Position = targetPosition;
+            }
+
         }
 
-        private bool CheckIfPlayerInRange(List<(int x, int y)> aroundSpider)
+        private (int x, int y) GetPlayerPosition(List<(int x, int y)> aroundSpider)
         {
             foreach (var position in aroundSpider)
             {
                 if (ActorManager.Singleton.GetActorAt(position) is Player)
                 {
-                    return true;
+                    return position;
                 }
             }
 
-            return false;
+            return (Position.x, Position.y);
         }
 
         private List<(int x, int y)> GetCoordinatesAroundSpider((int x, int y) spiderPosition, int rangeToCheck)
