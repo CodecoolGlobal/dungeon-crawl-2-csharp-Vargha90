@@ -13,7 +13,7 @@ namespace DungeonCrawl.Core
     /// </summary>
     public static class MapLoader
     {
-       private static (int x, int y) _playerPosition;
+       private static (int x, int y, int z) _playerPosition;
         /// <summary>
         ///     Constructs map from txt file and spawns actors at appropriate positions
         /// </summary>
@@ -36,7 +36,7 @@ namespace DungeonCrawl.Core
                     var character = line[x];
                     if ( id == 1)
                     {
-                        SpawnActor(character, (x, -y));
+                        SpawnActor(character, (x, -y, 0));
                     }
                     
                     else
@@ -47,12 +47,12 @@ namespace DungeonCrawl.Core
             }
             // Set default camera size and position
             CameraController.Singleton.Size = 6;
-            CameraController.Singleton.Position = (_playerPosition.x , _playerPosition.y);
+            CameraController.Singleton.Position = (_playerPosition.x , _playerPosition.y, _playerPosition.z);
             Debug.Log(_playerPosition.x);
             Debug.Log(_playerPosition.y);
         }
 
-        private static void SpawnActor(char c, (int x, int y) position)
+        private static void SpawnActor(char c, (int x, int y, int z) position)
         {
             switch (c)
             {
@@ -63,15 +63,19 @@ namespace DungeonCrawl.Core
                     ActorManager.Singleton.Spawn<Floor>(position);
                     break;
                 case 'p':
+                    position.z = Player.getZ;
                     ActorManager.Singleton.Spawn<Player>(position);
+                    Debug.Log(position.ToString());
                     _playerPosition = position;
                     ActorManager.Singleton.Spawn<Floor>(position);
                     break;
                 case 's':
+                    position.z = Skeleton.getZ;
                     ActorManager.Singleton.Spawn<Skeleton>(position);
                     ActorManager.Singleton.Spawn<Floor>(position);
                     break;
                 case 'b':
+                    position.z = Spider.getZ;
                     ActorManager.Singleton.Spawn<Spider>(position);
                     ActorManager.Singleton.Spawn<Floor>(position);
                     break;
