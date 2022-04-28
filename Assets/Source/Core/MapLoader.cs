@@ -107,6 +107,12 @@ namespace DungeonCrawl.Core
                     break;
                 case '~':
                     break;
+                case '&':
+                    break;
+                case 'p':
+                    break;
+                case 'b':
+                    break;
             }
         }
     }

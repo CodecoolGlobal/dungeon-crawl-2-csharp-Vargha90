@@ -1,12 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using DungeonCrawl.Actors;
 
 namespace Assets.Source.Actors.Static
 {
-    internal class Tree
+    internal class Tree : Actor
     {
+        public override int DefaultSpriteId => throw new System.NotImplementedException();
+
+        public override string DefaultName => "Tree";
+
+        public override bool Detectable => false;
     }
 }

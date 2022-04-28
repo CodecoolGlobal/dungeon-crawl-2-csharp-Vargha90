@@ -1,12 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using DungeonCrawl.Actors;
+using System;
 
 namespace Assets.Source.Actors.Static
 {
-    internal class Bridge
+    internal class Bridge : Actor
     {
+        public override int DefaultSpriteId => throw new NotImplementedException();
+
+        public override string DefaultName => "Bridge";
+
+        public override bool Detectable => false;
     }
 }
