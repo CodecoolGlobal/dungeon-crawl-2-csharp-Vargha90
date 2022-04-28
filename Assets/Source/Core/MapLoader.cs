@@ -57,6 +57,7 @@ namespace DungeonCrawl.Core
             switch (c)
             {
                 case '#':
+                    position.z = Wall.getZ;
                     ActorManager.Singleton.Spawn<Wall>(position);
                     break;
                 case '.':
