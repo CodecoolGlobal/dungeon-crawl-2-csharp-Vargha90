@@ -75,6 +75,7 @@ namespace DungeonCrawl.Actors
         public virtual bool OnCollision(Actor anotherActor)
         {
             // All actors are passable by default
+            
             return true;
         }
 
