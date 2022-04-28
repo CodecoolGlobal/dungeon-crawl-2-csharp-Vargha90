@@ -1,5 +1,4 @@
-﻿using System;
-using DungeonCrawl.Core;
+﻿using DungeonCrawl.Core;
 
 namespace DungeonCrawl.Actors.Characters
 {
@@ -36,7 +35,7 @@ namespace DungeonCrawl.Actors.Characters
         /// <summary>
         ///     All characters are drawn "above" floor etc
         /// </summary>
-        public  override int Z => -1;
-        
+        public override int Z => -1;
+
     }
 }

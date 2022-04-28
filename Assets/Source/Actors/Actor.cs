@@ -13,7 +13,7 @@ namespace DungeonCrawl.Actors
             set
             {
                 _position = value;
-                transform.position = new Vector3(value.x, value.y, value.z=Z);
+                transform.position = new Vector3(value.x, value.y, value.z = Z);
             }
         }
 

@@ -4,7 +4,7 @@ namespace Assets.Source.Actors.Static
 {
     internal class Flower : Actor
     {
-        public override int DefaultSpriteId => throw new System.NotImplementedException();
+        public override int DefaultSpriteId => 667;
 
         public override string DefaultName => "Flower";
 

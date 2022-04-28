@@ -1,9 +1,9 @@
-﻿using DungeonCrawl.Actors.Characters;
+﻿using Assets.Source.Actors.Characters;
+using Assets.Source.Actors.Static;
+using DungeonCrawl.Actors.Characters;
 using DungeonCrawl.Actors.Static;
 using System;
 using System.Text.RegularExpressions;
-using Assets.Source.Actors.Characters;
-using Assets.Source.Actors.Static;
 using UnityEngine;
 
 namespace DungeonCrawl.Core
@@ -13,7 +13,7 @@ namespace DungeonCrawl.Core
     /// </summary>
     public static class MapLoader
     {
-       private static (int x, int y, int z) _playerPosition;
+        private static (int x, int y, int z) _playerPosition;
         /// <summary>
         ///     Constructs map from txt file and spawns actors at appropriate positions
         /// </summary>
@@ -34,11 +34,11 @@ namespace DungeonCrawl.Core
                 for (var x = 0; x < width; x++)
                 {
                     var character = line[x];
-                    if ( id == 1)
+                    if (id == 1)
                     {
                         SpawnActor(character, (x, -y, 0));
                     }
-                    
+
                     else
                     {
                         SpawnActor2(character, (x, -y));
@@ -47,7 +47,7 @@ namespace DungeonCrawl.Core
             }
             // Set default camera size and position
             CameraController.Singleton.Size = 6;
-            CameraController.Singleton.Position = (_playerPosition.x , _playerPosition.y, _playerPosition.z);
+            CameraController.Singleton.Position = (_playerPosition.x, _playerPosition.y, _playerPosition.z);
             Debug.Log(_playerPosition.x);
             Debug.Log(_playerPosition.y);
         }
