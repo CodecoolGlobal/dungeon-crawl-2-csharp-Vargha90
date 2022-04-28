@@ -52,6 +52,7 @@ namespace DungeonCrawl.Actors
             {
                 // No obstacle found, just move
                 Position = targetPosition;
+                AudioManager.PlayStepSound();
             }
             else
             {
@@ -74,6 +75,7 @@ namespace DungeonCrawl.Actors
                 {
                     // Allowed to move
                     Position = targetPosition;
+                    AudioManager.PlayStepSound();
                 }
             }
         }

@@ -131,12 +131,14 @@ namespace Assets.Source.Actors.Characters
 
         public override bool OnCollision(Actor anotherActor)
         {
+            AudioManager.PlayHitSound("spider");
             ApplyDamage(Strength);
             return false;
         }
 
         protected override void OnDeath()
         {
+            AudioManager.PlayDeathSound("spider");
             Debug.Log("Well, I was already dead anyway...");
         }
 

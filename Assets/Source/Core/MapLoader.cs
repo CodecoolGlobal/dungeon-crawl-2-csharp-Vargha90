@@ -15,12 +15,24 @@ namespace DungeonCrawl.Core
     public static class MapLoader
     {
         private static (int x, int y, int z) _playerPosition;
+        public static int MapId;
         /// <summary>
         ///     Constructs map from txt file and spawns actors at appropriate positions
         /// </summary>
         /// <param name="id"></param>
         public static void LoadMap(int id)
         {
+            AudioManager.StopBGMusic();
+            if (id == 1)
+            {
+                AudioManager.PlayBGM("level_1");
+            }
+            else if (id == 2)
+            {
+                AudioManager.PlayBGM("level_2");
+                AudioManager.PlayAmbiante("birds");
+                AudioManager.PlayAmbiante("river");
+            }
             var lines = Regex.Split(Resources.Load<TextAsset>($"map_{id}").text, "\r\n|\r|\n");
 
             // Read map size from the first line
@@ -46,9 +58,15 @@ namespace DungeonCrawl.Core
                     }
                 }
             }
+            SetMapId(id);
             // Set default camera size and position
             CameraController.Singleton.Size = 6;
             CameraController.Singleton.Position = (_playerPosition.x, _playerPosition.y, _playerPosition.z);
+        }
+
+        private static void SetMapId(int id)
+        {
+            MapId = id;
         }
 
         private static void SpawnActor(char c, (int x, int y, int z) position)
