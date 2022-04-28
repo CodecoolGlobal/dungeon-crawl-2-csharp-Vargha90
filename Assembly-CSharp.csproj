@@ -81,6 +81,8 @@
     <Compile Include="Assets\Source\Actors\Characters\Spider.cs" />
     <Compile Include="Assets\Source\Actors\Characters\Boss.cs" />
     <Compile Include="Assets\Source\Actors\Static\River.cs" />
+    <Compile Include="Assets\Source\Actors\Static\Gate.cs" />
+    <Compile Include="Assets\Source\Actors\Static\Stairs.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
