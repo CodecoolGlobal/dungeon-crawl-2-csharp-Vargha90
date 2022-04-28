@@ -9,5 +9,10 @@ namespace Assets.Source.Actors.Static
         public override string DefaultName => "River";
 
         public static int getZ = -1;
+
+        public override bool OnCollision(Actor anotherActor)
+        {
+            return false;
+        }
     }
 }

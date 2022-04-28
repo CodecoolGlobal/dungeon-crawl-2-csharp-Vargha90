@@ -8,8 +8,10 @@ namespace Assets.Source.Actors.Static
 
         public override string DefaultName => "Tree";
 
-        public override bool Detectable => false;
-
         public static int getZ = -1;
+        public override bool OnCollision(Actor anotherActor)
+        {
+            return false;
+        }
     }
 }

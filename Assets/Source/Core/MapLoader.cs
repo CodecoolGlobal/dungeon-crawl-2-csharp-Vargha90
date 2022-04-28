@@ -5,6 +5,7 @@ using DungeonCrawl.Actors.Static;
 using System;
 using System.Text.RegularExpressions;
 using UnityEngine;
+using Tree = Assets.Source.Actors.Static.Tree;
 
 namespace DungeonCrawl.Core
 {
@@ -41,7 +42,7 @@ namespace DungeonCrawl.Core
 
                     else
                     {
-                        SpawnActor2(character, (x, -y));
+                        SpawnActor2(character, (x, -y, 0));
                     }
                 }
             }
@@ -92,6 +93,9 @@ namespace DungeonCrawl.Core
                     ActorManager.Singleton.Spawn<Meat>(position);
                     ActorManager.Singleton.Spawn<Floor>(position);
                     break;
+                case 'g':
+                    ActorManager.Singleton.Spawn<Stairs>(position);
+                    break;
                 case ' ':
                     break;
                 default:
@@ -99,29 +103,48 @@ namespace DungeonCrawl.Core
             }
         }
 
-        private static void SpawnActor2(char c, (int x, int y) position)
+        private static void SpawnActor2(char c, (int x, int y, int z) position)
         {
             switch (c)
             {
                 case '.':
+                    ActorManager.Singleton.Spawn<Grass>(position);
                     break;
                 case '#':
+                    position.z = Wall.getZ;
+                    ActorManager.Singleton.Spawn<Wall>(position);
                     break;
                 case '+':
+                    position.z = Tree.getZ;
+                    ActorManager.Singleton.Spawn<Tree>(position);
+                    //ActorManager.Singleton.Spawn<Grass>(position);
                     break;
                 case '|':
+                    ActorManager.Singleton.Spawn<Road>(position);
                     break;
                 case '*':
+                    ActorManager.Singleton.Spawn<Flower>(position);
+                    //ActorManager.Singleton.Spawn<Grass>(position);
                     break;
                 case '=':
+                    ActorManager.Singleton.Spawn<Bridge>(position);
                     break;
                 case '~':
+                    position.z = River.getZ;
+                    ActorManager.Singleton.Spawn<River>(position);
                     break;
                 case '&':
                     break;
                 case 'p':
+                    position.z = Player.getZ;
+                    ActorManager.Singleton.Spawn<Player>(position);
+                    _playerPosition = position;
+                    ActorManager.Singleton.Spawn<Grass>(position);
                     break;
                 case 'b':
+                    position.z = Boss.getZ;
+                    ActorManager.Singleton.Spawn<Boss>(position);
+                    ActorManager.Singleton.Spawn<Grass>(position);
                     break;
             }
         }

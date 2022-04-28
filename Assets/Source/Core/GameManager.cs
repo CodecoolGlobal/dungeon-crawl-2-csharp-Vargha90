@@ -9,7 +9,7 @@ namespace DungeonCrawl.Core
     {
         private void Start()
         {// map change condition here
-            MapLoader.LoadMap(1);
+            //MapLoader.LoadMap(1);
             MapLoader.LoadMap(2);
         }
     }
