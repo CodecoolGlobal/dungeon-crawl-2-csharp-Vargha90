@@ -82,12 +82,10 @@ namespace DungeonCrawl.Actors.Characters
 
         protected override void OnDeath()
         {
+            AudioManager.PlayDeathSound("player");
             UserInterface.Singleton.SetText("Health: 0", UserInterface.TextPosition.TopLeft);
             UserInterface.Singleton.SetText("YOU DIED...", UserInterface.TextPosition.MiddleCenter);
             Debug.Log("Oh no, I'm dead!");
         }
-
-
-
     }
 }

@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
-    public static AudioClip level1, level2, stoneStep, grassStep, hitSkeleton, hitSpider, deathSkeleton, deathSpider, birds, river, wrongWay, collect;
+    public static AudioClip level1, level2, stoneStep, grassStep, hitSkeleton, hitSpider, deathSkeleton, deathSpider, birds, river, wrongWay, collect, transfer, deathPlayer;
     static AudioSource audioSrc;
 
     void Start()
@@ -23,6 +23,8 @@ public class AudioManager : MonoBehaviour
         river = Resources.Load<AudioClip>("river");
         wrongWay = Resources.Load<AudioClip>("wrong_way");
         collect = Resources.Load<AudioClip>("pick_up");
+        transfer = Resources.Load<AudioClip>("transfer");
+        deathPlayer = Resources.Load<AudioClip>("death_player");
 
         audioSrc = GetComponent<AudioSource>();
     }
@@ -79,6 +81,9 @@ public class AudioManager : MonoBehaviour
             case "collect":
                 audioSrc.PlayOneShot(collect);
                 break;
+            case "transfer":
+                audioSrc.PlayOneShot(transfer);
+                break;
         }
     }
 
@@ -104,6 +109,9 @@ public class AudioManager : MonoBehaviour
                 break;
             case "spider":
                 audioSrc.PlayOneShot(deathSpider);
+                break;
+            case "player":
+                audioSrc.PlayOneShot(deathPlayer);
                 break;
         }
     }

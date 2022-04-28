@@ -23,6 +23,7 @@ namespace DungeonCrawl.Core
         public static void LoadMap(int id)
         {
             AudioManager.StopBGMusic();
+            AudioManager.PlayActionSound("transfer");
             if (id == 1)
             {
                 AudioManager.PlayBGM("level_1");
