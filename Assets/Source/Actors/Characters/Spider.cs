@@ -49,80 +49,42 @@ namespace Assets.Source.Actors.Characters
             {
                 if (spiderPosition.x < playerPosition.x)
                 {
-                    (int x, int y) targetPosition = (Position.x + 1, Position.y);
-                    if (CheckTargetPosition(targetPosition) is Wall ||
-                        CheckTargetPosition(targetPosition) is Skeleton)
-                    {
-                        Direction direction = spiderPosition.y < playerPosition.y ? Direction.Up : Direction.Down;
-                        TryMove(direction);
-                    } 
-                    else
-                    {
-                        TryMove(Direction.Right);
-                    }
+                    TryMove(Direction.Right);
                 }
                 else if (spiderPosition.x > playerPosition.x)
                 {
-                    (int x, int y) targetPosition = (Position.x - 1, Position.y);
-                    if (CheckTargetPosition(targetPosition) is Wall ||
-                        CheckTargetPosition(targetPosition) is Skeleton)
-                    {
-                        Direction direction = spiderPosition.y < playerPosition.y ? Direction.Up : Direction.Down;
-                        TryMove(direction);
-                    }
-                    else
-                    {
-                        TryMove(Direction.Left);
-                    }
+                    TryMove(Direction.Left);
                 }
                 else if (spiderPosition.y < playerPosition.y)
                 {
-                    (int x, int y) targetPosition = (Position.x, Position.y + 1);
-                    if (CheckTargetPosition(targetPosition) is Wall ||
-                        CheckTargetPosition(targetPosition) is Skeleton)
-                    {
-                        Direction direction = spiderPosition.x < playerPosition.x ? Direction.Right : Direction.Left;
-                        TryMove(direction);
-                    }
-                    else
-                    {
-                        TryMove(Direction.Up);
-                    }
+                    TryMove(Direction.Up);
                 }
                 else if (spiderPosition.y > playerPosition.y)
                 {
-                    (int x, int y) targetPosition = (Position.x, Position.y - 1);
-                    if (CheckTargetPosition(targetPosition) is Wall ||
-                        CheckTargetPosition(targetPosition) is Skeleton)
-                    {
-                        Direction direction = spiderPosition.y < playerPosition.y ? Direction.Right : Direction.Left;
-                        TryMove(direction);
-                    }
-                    else
-                    {
-                        TryMove(Direction.Down);
-                    }
+                    TryMove(Direction.Down);
                 }
             }
-        }
-
-        private Actor CheckTargetPosition((int x, int y) position)
-        {
-            return ActorManager.Singleton.GetActorAt(position);
         }
 
         protected override void TryMove(Direction direction)
         {
             (int x, int y) vector = direction.ToVector();
             (int x, int y) targetPosition = (Position.x + vector.x, Position.y + vector.y);
-
             var actorAtTargetPosition = ActorManager.Singleton.GetActorAt(targetPosition);
 
-            if (actorAtTargetPosition == null)
+            if (actorAtTargetPosition is Wall ||
+                actorAtTargetPosition is Skeleton)
+            {
+                Position = Position;
+            }
+            else if (actorAtTargetPosition is Player)
+            {
+                OnCollision(actorAtTargetPosition);
+            }
+            else
             {
                 Position = targetPosition;
             }
-
         }
 
         private (int x, int y) GetPlayerPosition(List<(int x, int y)> aroundSpider)
