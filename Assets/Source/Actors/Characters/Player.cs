@@ -26,7 +26,7 @@ namespace DungeonCrawl.Actors.Characters
                 // Move up
                 TryMove(Direction.Up);
                 CameraController.Singleton.Position = this.Position;
-                Debug.Log(Position);
+                //Debug.Log(Position);
             }
 
             if (Input.GetKeyDown(KeyCode.S))

@@ -78,12 +78,12 @@
     <Compile Include="Assets\Source\Actors\Static\Bridge.cs" />
     <Compile Include="Assets\Source\Actors\Static\Road.cs" />
     <Compile Include="Assets\Source\Actors\Static\Flower.cs" />
-    <Compile Include="Assets\Source\Core\AudioManager.cs" />
     <Compile Include="Assets\Source\Actors\Characters\Spider.cs" />
     <Compile Include="Assets\Source\Actors\Characters\Boss.cs" />
     <Compile Include="Assets\Source\Actors\Static\River.cs" />
     <Compile Include="Assets\Source\Actors\Static\Gate.cs" />
     <Compile Include="Assets\Source\Actors\Static\Stairs.cs" />
+    <Compile Include="Assets\Source\Core\AudioManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
