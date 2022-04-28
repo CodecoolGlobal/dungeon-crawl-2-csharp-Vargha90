@@ -38,7 +38,7 @@ namespace DungeonCrawl.Core
         /// </summary>
         /// <param name="position"></param>
         /// <returns></returns>
-        public Actor GetActorAt((int x, int y) position)
+        public Actor GetActorAt((int x, int y, int z) position)
         {
             return _allActors.FirstOrDefault(actor => actor.Detectable && actor.Position == position);
         }
@@ -49,7 +49,7 @@ namespace DungeonCrawl.Core
         /// <typeparam name="T"></typeparam>
         /// <param name="position"></param>
         /// <returns></returns>
-        public T GetActorAt<T>((int x, int y) position) where T : Actor
+        public T GetActorAt<T>((int x, int y, int z) position) where T : Actor
         {
             return _allActors.FirstOrDefault(actor => actor.Detectable && actor is T && actor.Position == position) as T;
         }
@@ -92,9 +92,9 @@ namespace DungeonCrawl.Core
         /// <param name="position">Position</param>
         /// <param name="actorName">Actor's name (optional)</param>
         /// <returns></returns>
-        public T Spawn<T>((int x, int y) position, string actorName = null) where T : Actor
+        public T Spawn<T>((int x, int y, int z) position, string actorName = null) where T : Actor
         {
-            return Spawn<T>(position.x, position.y, actorName);
+            return Spawn<T>(position.x, position.y, position.z, actorName);
         }
 
         /// <summary>
@@ -105,7 +105,7 @@ namespace DungeonCrawl.Core
         /// <param name="y">Y coordinate</param>
         /// <param name="actorName">Actor's name (optional)</param>
         /// <returns></returns>
-        public T Spawn<T>(int x, int y, string actorName = null) where T : Actor
+        public T Spawn<T>(int x, int y, int z, string actorName = null) where T : Actor
         {
             var go = new GameObject();
             go.AddComponent<SpriteRenderer>();
@@ -113,7 +113,7 @@ namespace DungeonCrawl.Core
             var component = go.AddComponent<T>();
 
             go.name = actorName ?? component.DefaultName;
-            component.Position = (x, y);
+            component.Position = (x, y, z);
             _allActors.Add(component);
 
             return component;

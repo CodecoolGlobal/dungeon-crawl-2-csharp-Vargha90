@@ -15,7 +15,7 @@ namespace DungeonCrawl.Core
         /// <summary>
         ///     Camera's current position
         /// </summary>
-        public (int x, int y) Position
+        public (int x, int y, int z) Position
         {
             get => _position;
             set
@@ -34,7 +34,7 @@ namespace DungeonCrawl.Core
             set => _camera.orthographicSize = value;
         }
 
-        private (int x, int y) _position;
+        private (int x, int y, int z) _position;
         private Camera _camera;
 
         private void Awake()

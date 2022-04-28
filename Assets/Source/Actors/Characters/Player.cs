@@ -8,6 +8,8 @@ namespace DungeonCrawl.Actors.Characters
 {
     public class Player : Character
     {
+        public static int getZ = -1;
+
         protected override void Awake()
         {
             base.Awake();
@@ -48,7 +50,7 @@ namespace DungeonCrawl.Actors.Characters
             if (Input.GetKeyDown(KeyCode.E))
             {
                 // Pick up or interact
-                Item item = ActorManager.Singleton.GetActorAt<Item>(Position);
+                Item item = ActorManager.Singleton.GetActorAt<Item>((Position.x, Position.y, 0));
                 if (item != null)
                 {
                     ActorManager.Singleton.DestroyActor(item);

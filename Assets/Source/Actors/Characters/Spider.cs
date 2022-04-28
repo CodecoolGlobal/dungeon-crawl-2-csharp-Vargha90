@@ -12,6 +12,7 @@ namespace Assets.Source.Actors.Characters
 {
     internal class Spider : Character
     {
+        public static int getZ = -1;
         protected override void Awake()
         {
             base.Awake();
@@ -36,9 +37,9 @@ namespace Assets.Source.Actors.Characters
             Random random = new Random();
             Array values = Enum.GetValues(typeof(Direction));
 
-            (int x, int y) spiderPosition = (Position.x, Position.y);
-            List<(int x, int y)> aroundSpider = GetCoordinatesAroundSpider(spiderPosition, 2);
-            (int x, int y) playerPosition = GetPlayerPosition(aroundSpider);
+            (int x, int y, int z) spiderPosition = (Position.x, Position.y, Position.z);
+            List<(int x, int y, int z)> aroundSpider = GetCoordinatesAroundSpider(spiderPosition, 2);
+            (int x, int y, int z) playerPosition = GetPlayerPosition(aroundSpider);
 
             if (spiderPosition == playerPosition)
             {
@@ -68,8 +69,8 @@ namespace Assets.Source.Actors.Characters
 
         protected override void TryMove(Direction direction)
         {
-            (int x, int y) vector = direction.ToVector();
-            (int x, int y) targetPosition = (Position.x + vector.x, Position.y + vector.y);
+            (int x, int y, int z) vector = direction.ToVector();
+            (int x, int y, int z) targetPosition = (Position.x + vector.x, Position.y + vector.y, Position.z);
             var actorAtTargetPosition = ActorManager.Singleton.GetActorAt(targetPosition);
 
             if (actorAtTargetPosition is Wall ||
@@ -87,7 +88,7 @@ namespace Assets.Source.Actors.Characters
             }
         }
 
-        private (int x, int y) GetPlayerPosition(List<(int x, int y)> aroundSpider)
+        private (int x, int y, int z) GetPlayerPosition(List<(int x, int y, int z)> aroundSpider)
         {
             foreach (var position in aroundSpider)
             {
@@ -97,12 +98,12 @@ namespace Assets.Source.Actors.Characters
                 }
             }
 
-            return (Position.x, Position.y);
+            return (Position.x, Position.y, Position.z);
         }
 
-        private List<(int x, int y)> GetCoordinatesAroundSpider((int x, int y) spiderPosition, int rangeToCheck)
+        private List<(int x, int y, int z)> GetCoordinatesAroundSpider((int x, int y, int z) spiderPosition, int rangeToCheck)
         {
-            List<(int x, int y)> aroundSpider = new List<(int x, int y)>();
+            List<(int x, int y, int z)> aroundSpider = new List<(int x, int y, int z)>();
             List<int> xCoordinates = new List<int> {spiderPosition.x};
             List<int> yCoordinates = new List<int> {spiderPosition.y};
 
@@ -118,11 +119,11 @@ namespace Assets.Source.Actors.Characters
             {
                 foreach (int yCoordinate in yCoordinates)
                 {
-                    aroundSpider.Add((xCoordinate, yCoordinate));
+                    aroundSpider.Add((xCoordinate, yCoordinate,Position.z));
                 }
             }
 
-            aroundSpider.Remove((spiderPosition.x, spiderPosition.y));
+            aroundSpider.Remove((spiderPosition.x, spiderPosition.y, spiderPosition.z));
 
             return aroundSpider;
         }
