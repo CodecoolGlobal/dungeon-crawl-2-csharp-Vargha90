@@ -47,7 +47,6 @@ namespace DungeonCrawl.Actors.Characters
                 Item item = ActorManager.Singleton.GetActorAt<Item>(Position);
                 if (item != null)
                 {
-                    Debug.Log(item.DefaultName);
                     ActorManager.Singleton.DestroyActor(item);
                 }
             }
