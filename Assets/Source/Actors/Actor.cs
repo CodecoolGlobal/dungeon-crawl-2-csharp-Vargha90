@@ -1,4 +1,7 @@
-﻿using DungeonCrawl.Core;
+﻿using System.Security.Cryptography.X509Certificates;
+using Assets.Source.Actors.Characters;
+using DungeonCrawl.Actors.Characters;
+using DungeonCrawl.Core;
 using UnityEngine;
 
 namespace DungeonCrawl.Actors
@@ -18,7 +21,7 @@ namespace DungeonCrawl.Actors
         private (int x, int y) _position;
         private SpriteRenderer _spriteRenderer;
 
-        private void Awake()
+        protected virtual void Awake()
         {
             _spriteRenderer = GetComponent<SpriteRenderer>();
 
@@ -35,12 +38,14 @@ namespace DungeonCrawl.Actors
             _spriteRenderer.sprite = ActorManager.Singleton.GetSprite(id);
         }
 
-        public void TryMove(Direction direction)
+        protected virtual void TryMove(Direction direction)
         {
             var vector = direction.ToVector();
             (int x, int y) targetPosition = (Position.x + vector.x, Position.y + vector.y);
+            (int x, int y) currentPosition = (Position.x, Position.y);
 
             var actorAtTargetPosition = ActorManager.Singleton.GetActorAt(targetPosition);
+            var playerActor = ActorManager.Singleton.GetActorAt(currentPosition);
 
             if (actorAtTargetPosition == null)
             {
@@ -49,7 +54,12 @@ namespace DungeonCrawl.Actors
             }
             else
             {
-                if (actorAtTargetPosition.OnCollision(this))
+                if (actorAtTargetPosition is Skeleton || actorAtTargetPosition is Spider)
+                {
+                    playerActor.OnCollision(actorAtTargetPosition);
+                    actorAtTargetPosition.OnCollision(playerActor);
+                }
+                else if (actorAtTargetPosition.OnCollision(this))
                 {
                     // Allowed to move
                     Position = targetPosition;

@@ -1,10 +1,22 @@
-﻿using DungeonCrawl.Core;
+﻿using System;
+using DungeonCrawl.Core;
 
 namespace DungeonCrawl.Actors.Characters
 {
     public abstract class Character : Actor
     {
         public int Health { get; private set; }
+        public int Strength { get; private set; }
+
+        protected void SetStrength(int strength)
+        {
+            Strength = strength;
+        }
+
+        protected void SetHealth(int health)
+        {
+            Health = health;
+        }
 
         public void ApplyDamage(int damage)
         {

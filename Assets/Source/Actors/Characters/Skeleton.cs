@@ -4,8 +4,15 @@ namespace DungeonCrawl.Actors.Characters
 {
     public class Skeleton : Character
     {
+        protected override void Awake()
+        {
+            base.Awake();
+            SetHealth(30);
+            SetStrength(5);
+        }
         public override bool OnCollision(Actor anotherActor)
         {
+            ApplyDamage(Strength);
             return false;
         }
 

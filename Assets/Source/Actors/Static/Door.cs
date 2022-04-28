@@ -8,6 +8,7 @@ namespace Assets.Source.Actors.Static
         private bool _open = false;
 
         public bool Open { get { return _open; } private set { _open = value; } }
+
         public override int DefaultSpriteId => 438;
 
         public override string DefaultName => "Door";

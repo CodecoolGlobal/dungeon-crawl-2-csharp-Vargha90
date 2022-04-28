@@ -1,4 +1,6 @@
-﻿using Assets.Source.Actors.Static;
+﻿using Assets.Source.Actors.Characters;
+using Assets.Source.Actors.Static;
+using Assets.Source.Core;
 using DungeonCrawl.Core;
 using UnityEngine;
 
@@ -6,10 +8,15 @@ namespace DungeonCrawl.Actors.Characters
 {
     public class Player : Character
     {
-        //private (int x, int y) PlayerPosition;
+        protected override void Awake()
+        {
+            base.Awake();
+            SetHealth(100);
+        }
 
         protected override void OnUpdate(float deltaTime)
         {
+            UserInterface.Singleton.SetText("Health: " + Health.ToString(), UserInterface.TextPosition.TopLeft);
             if (Input.GetKeyDown(KeyCode.W))
             {
                 // Move up
@@ -38,26 +45,36 @@ namespace DungeonCrawl.Actors.Characters
                 CameraController.Singleton.Position = this.Position;
             }
 
-            //if (Input.GetKeyDown(KeyCode.E))
-            //{
-            //    // Pick up or interact
-            //    Item item = ActorManager.Singleton.GetActorAt<Item>(Position);
-            //    PlayerPosition = item.Position;
-            //    if (item != null)
-            //    {
-            //        Debug.Log(item.DefaultName);
-            //        ActorManager.Singleton.DestroyActor(item);
-            //    }
-            //}
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                // Pick up or interact
+                Item item = ActorManager.Singleton.GetActorAt<Item>(Position);
+                if (item != null)
+                {
+                    ActorManager.Singleton.DestroyActor(item);
+                }
+            }
         }
 
         public override bool OnCollision(Actor anotherActor)
         {
+            if (anotherActor is Skeleton)
+            {
+                SetStrength(2);
+                ApplyDamage(Strength);
+            }
+            else if (anotherActor is Spider)
+            {
+                SetStrength(5);
+                ApplyDamage(Strength);
+            }
             return false;
         }
 
         protected override void OnDeath()
         {
+            UserInterface.Singleton.SetText("Health: 0", UserInterface.TextPosition.TopLeft);
+            UserInterface.Singleton.SetText("YOU DIED...", UserInterface.TextPosition.MiddleCenter);
             Debug.Log("Oh no, I'm dead!");
         }
 
