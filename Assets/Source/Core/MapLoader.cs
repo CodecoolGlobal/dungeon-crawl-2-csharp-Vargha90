@@ -49,8 +49,6 @@ namespace DungeonCrawl.Core
             // Set default camera size and position
             CameraController.Singleton.Size = 6;
             CameraController.Singleton.Position = (_playerPosition.x, _playerPosition.y, _playerPosition.z);
-            Debug.Log(_playerPosition.x);
-            Debug.Log(_playerPosition.y);
         }
 
         private static void SpawnActor(char c, (int x, int y, int z) position)
@@ -67,7 +65,6 @@ namespace DungeonCrawl.Core
                 case 'p':
                     position.z = Player.getZ;
                     ActorManager.Singleton.Spawn<Player>(position);
-                    Debug.Log(position.ToString());
                     _playerPosition = position;
                     ActorManager.Singleton.Spawn<Floor>(position);
                     break;
@@ -94,6 +91,7 @@ namespace DungeonCrawl.Core
                     ActorManager.Singleton.Spawn<Floor>(position);
                     break;
                 case 'g':
+                    position.z = Stairs.getZ;
                     ActorManager.Singleton.Spawn<Stairs>(position);
                     break;
                 case ' ':
@@ -133,8 +131,6 @@ namespace DungeonCrawl.Core
                     position.z = River.getZ;
                     ActorManager.Singleton.Spawn<River>(position);
                     break;
-                case '&':
-                    break;
                 case 'p':
                     position.z = Player.getZ;
                     ActorManager.Singleton.Spawn<Player>(position);
@@ -146,6 +142,12 @@ namespace DungeonCrawl.Core
                     ActorManager.Singleton.Spawn<Boss>(position);
                     ActorManager.Singleton.Spawn<Grass>(position);
                     break;
+                case '&':
+                    position.z = Gate.getZ;
+                    ActorManager.Singleton.Spawn<Gate>(position);
+                    break;
+                default:
+                    throw new ArgumentOutOfRangeException();
             }
         }
     }

@@ -1,4 +1,5 @@
 ﻿using Assets.Source.Actors.Characters;
+using Assets.Source.Actors.Static;
 using DungeonCrawl.Actors.Characters;
 using DungeonCrawl.Core;
 using UnityEngine;
@@ -44,6 +45,7 @@ namespace DungeonCrawl.Actors
             (int x, int y, int z) currentPosition = (Position.x, Position.y, Position.z);
 
             var actorAtTargetPosition = ActorManager.Singleton.GetActorAt(targetPosition);
+            //Debug.Log(actorAtTargetPosition);
             var playerActor = ActorManager.Singleton.GetActorAt(currentPosition);
 
             if (actorAtTargetPosition == null)
@@ -57,6 +59,16 @@ namespace DungeonCrawl.Actors
                 {
                     //playerActor.OnCollision(actorAtTargetPosition);
                     actorAtTargetPosition.OnCollision(playerActor);
+                }
+                else if (actorAtTargetPosition is Stairs)
+                {
+                    ActorManager.Singleton.DestroyAllActors();
+                    MapLoader.LoadMap(2);
+                }
+                else if (actorAtTargetPosition is Gate)
+                {
+                    ActorManager.Singleton.DestroyAllActors();
+                    MapLoader.LoadMap(1);
                 }
                 else if (actorAtTargetPosition.OnCollision(this))
                 {

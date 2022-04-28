@@ -9,6 +9,8 @@ namespace DungeonCrawl.Actors.Characters
     public class Player : Character
     {
         public static int getZ = -1;
+        public override int DefaultSpriteId => 24;
+        public override string DefaultName => "Player";
 
         protected override void Awake()
         {
@@ -24,6 +26,7 @@ namespace DungeonCrawl.Actors.Characters
                 // Move up
                 TryMove(Direction.Up);
                 CameraController.Singleton.Position = this.Position;
+                Debug.Log(Position);
             }
 
             if (Input.GetKeyDown(KeyCode.S))
@@ -31,6 +34,7 @@ namespace DungeonCrawl.Actors.Characters
                 // Move down
                 TryMove(Direction.Down);
                 CameraController.Singleton.Position = this.Position;
+                //Debug.Log(Position);
             }
 
             if (Input.GetKeyDown(KeyCode.A))
@@ -38,6 +42,7 @@ namespace DungeonCrawl.Actors.Characters
                 // Move left
                 TryMove(Direction.Left);
                 CameraController.Singleton.Position = this.Position;
+                //Debug.Log(Position);
             }
 
             if (Input.GetKeyDown(KeyCode.D))
@@ -45,6 +50,7 @@ namespace DungeonCrawl.Actors.Characters
                 // Move right
                 TryMove(Direction.Right);
                 CameraController.Singleton.Position = this.Position;
+                //Debug.Log(Position);
             }
 
             if (Input.GetKeyDown(KeyCode.E))
@@ -80,12 +86,7 @@ namespace DungeonCrawl.Actors.Characters
             Debug.Log("Oh no, I'm dead!");
         }
 
-        //public void SetPosition((int x, int y) position)
-        //{
-        //    PlayerPosition = position;
-        //}
 
-        public override int DefaultSpriteId => 24;
-        public override string DefaultName => "Player";
+
     }
 }
