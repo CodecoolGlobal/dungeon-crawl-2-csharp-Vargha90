@@ -79,7 +79,8 @@ namespace Assets.Source.Actors.Characters
             }
             else if (actorAtTargetPosition is Player)
             {
-                OnCollision(actorAtTargetPosition);
+                //OnCollision(actorAtTargetPosition);
+                actorAtTargetPosition.OnCollision(this);
             }
             else
             {
