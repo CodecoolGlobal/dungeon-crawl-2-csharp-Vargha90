@@ -2,6 +2,7 @@
 {
     public class Wall : Actor
     {
+        public static int getZ = -1;
         public override int DefaultSpriteId => 825;
         public override string DefaultName => "Wall";
 
