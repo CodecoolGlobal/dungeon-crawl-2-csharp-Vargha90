@@ -12,7 +12,7 @@ namespace Assets.Source.Actors.Characters
 {
     internal class Spider : Character
     {
-        public static int getZ = -1;
+        public static int getZ = -2;
         protected override void Awake()
         {
             base.Awake();

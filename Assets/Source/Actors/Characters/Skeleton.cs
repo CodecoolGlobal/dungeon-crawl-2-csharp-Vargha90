@@ -6,7 +6,7 @@ namespace DungeonCrawl.Actors.Characters
 {
     public class Skeleton : Character
     {
-        public static int getZ = -1;
+        public static int getZ = -2;
         protected override void Awake()
         {
             base.Awake();

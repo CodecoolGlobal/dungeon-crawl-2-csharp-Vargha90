@@ -8,7 +8,7 @@ namespace DungeonCrawl.Actors.Characters
 {
     public class Player : Character
     {
-        public static int getZ = -1;
+        public static int getZ = -2;
         public override int DefaultSpriteId => 24;
         public override string DefaultName => "Player";
 
@@ -56,9 +56,10 @@ namespace DungeonCrawl.Actors.Characters
             if (Input.GetKeyDown(KeyCode.E))
             {
                 // Pick up or interact
-                Item item = ActorManager.Singleton.GetActorAt<Item>((Position.x, Position.y, 0));
+                Item item = ActorManager.Singleton.GetActorAt<Item>((Position.x, Position.y, -1));
                 if (item != null)
                 {
+                    AudioManager.PlayActionSound("collect");
                     ActorManager.Singleton.DestroyActor(item);
                 }
             }

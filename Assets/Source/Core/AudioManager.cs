@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
-    public static AudioClip level1, level2, stoneStep, grassStep, hitSkeleton, hitSpider, deathSkeleton, deathSpider, birds, river;
+    public static AudioClip level1, level2, stoneStep, grassStep, hitSkeleton, hitSpider, deathSkeleton, deathSpider, birds, river, wrongWay, collect;
     static AudioSource audioSrc;
 
     void Start()
@@ -21,6 +21,8 @@ public class AudioManager : MonoBehaviour
         deathSpider = Resources.Load<AudioClip>("death_spider");
         birds = Resources.Load<AudioClip>("birds");
         river = Resources.Load<AudioClip>("river");
+        wrongWay = Resources.Load<AudioClip>("wrong_way");
+        collect = Resources.Load<AudioClip>("pick_up");
 
         audioSrc = GetComponent<AudioSource>();
     }
@@ -58,15 +60,25 @@ public class AudioManager : MonoBehaviour
 
     }
 
-    public static void PlayStepSound()
+    public static void PlayStepSound(string floorType)
     {
-        if (MapLoader.MapId == 1)
+        if (floorType == "stone")
         {
             audioSrc.PlayOneShot(stoneStep);
         }
-        else if (MapLoader.MapId == 2)
+        else if (floorType == "grass")
         {
             audioSrc.PlayOneShot(grassStep);
+        }
+    }
+
+    public static void PlayActionSound(string actionType)
+    {
+        switch (actionType)
+        {
+            case "collect":
+                audioSrc.PlayOneShot(collect);
+                break;
         }
     }
 
@@ -92,6 +104,16 @@ public class AudioManager : MonoBehaviour
                 break;
             case "spider":
                 audioSrc.PlayOneShot(deathSpider);
+                break;
+        }
+    }
+
+    public static void PlayVocal(string say)
+    {
+        switch (say)
+        {
+            case "no":
+                audioSrc.PlayOneShot(wrongWay);
                 break;
         }
     }

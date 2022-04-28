@@ -8,6 +8,6 @@ namespace Assets.Source.Actors.Static
 
         public override string DefaultName => "Key";
 
-        public override int Z => -1;
+        public static int getZ = -1;
     }
 }

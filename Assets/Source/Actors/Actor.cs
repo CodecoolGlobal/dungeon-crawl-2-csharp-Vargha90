@@ -1,8 +1,10 @@
 ﻿using Assets.Source.Actors.Characters;
 using Assets.Source.Actors.Static;
 using DungeonCrawl.Actors.Characters;
+using DungeonCrawl.Actors.Static;
 using DungeonCrawl.Core;
 using UnityEngine;
+using Tree = Assets.Source.Actors.Static.Tree;
 
 namespace DungeonCrawl.Actors
 {
@@ -52,7 +54,15 @@ namespace DungeonCrawl.Actors
             {
                 // No obstacle found, just move
                 Position = targetPosition;
-                AudioManager.PlayStepSound();
+                var floorType = ActorManager.Singleton.GetActorAt((Position.x, Position.y, 0));
+                if (floorType is Floor || floorType is Road || floorType is Bridge)
+                {
+                    AudioManager.PlayStepSound("stone");
+                }
+                else if (floorType is Grass)
+                {
+                    AudioManager.PlayStepSound("grass");
+                }
             }
             else
             {
@@ -71,11 +81,24 @@ namespace DungeonCrawl.Actors
                     ActorManager.Singleton.DestroyAllActors();
                     MapLoader.LoadMap(1);
                 }
+                else if (actorAtTargetPosition is Wall || actorAtTargetPosition is Tree ||
+                         actorAtTargetPosition is River)
+                {
+                    AudioManager.PlayVocal("no");
+                }
                 else if (actorAtTargetPosition.OnCollision(this))
                 {
                     // Allowed to move
                     Position = targetPosition;
-                    AudioManager.PlayStepSound();
+                    var floorType = ActorManager.Singleton.GetActorAt((Position.x, Position.y, 0));
+                    if (floorType is Floor || floorType is Road || floorType is Bridge)
+                    {
+                        AudioManager.PlayStepSound("stone");
+                    }
+                    else if (floorType is Grass)
+                    {
+                        AudioManager.PlayStepSound("grass");
+                    }
                 }
             }
         }

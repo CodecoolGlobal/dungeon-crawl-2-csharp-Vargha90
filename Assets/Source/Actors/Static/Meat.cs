@@ -8,7 +8,7 @@ namespace Assets.Source.Actors.Static
 
         public override string DefaultName => "Chunk of Meat";
 
-        public override int Z => -1;
+        public static int getZ = -1;
 
     }
 }

@@ -78,6 +78,7 @@ namespace DungeonCrawl.Core
                     ActorManager.Singleton.Spawn<Wall>(position);
                     break;
                 case '.':
+                    position.z = Floor.getZ;
                     ActorManager.Singleton.Spawn<Floor>(position);
                     break;
                 case 'p':
@@ -97,6 +98,7 @@ namespace DungeonCrawl.Core
                     ActorManager.Singleton.Spawn<Floor>(position);
                     break;
                 case 'k':
+                    position.z = Key.getZ;
                     ActorManager.Singleton.Spawn<Key>(position);
                     ActorManager.Singleton.Spawn<Floor>(position);
                     break;
@@ -105,6 +107,7 @@ namespace DungeonCrawl.Core
                     ActorManager.Singleton.Spawn<Floor>(position);
                     break;
                 case 'm':
+                    position.z = Meat.getZ;
                     ActorManager.Singleton.Spawn<Meat>(position);
                     ActorManager.Singleton.Spawn<Floor>(position);
                     break;
@@ -124,6 +127,7 @@ namespace DungeonCrawl.Core
             switch (c)
             {
                 case '.':
+                    position.z = Grass.getZ;
                     ActorManager.Singleton.Spawn<Grass>(position);
                     break;
                 case '#':
@@ -136,13 +140,16 @@ namespace DungeonCrawl.Core
                     //ActorManager.Singleton.Spawn<Grass>(position);
                     break;
                 case '|':
+                    position.z = Road.getZ;
                     ActorManager.Singleton.Spawn<Road>(position);
                     break;
                 case '*':
+                    position.z = Flower.getZ;
                     ActorManager.Singleton.Spawn<Flower>(position);
                     //ActorManager.Singleton.Spawn<Grass>(position);
                     break;
                 case '=':
+                    position.z = Bridge.getZ;
                     ActorManager.Singleton.Spawn<Bridge>(position);
                     break;
                 case '~':
