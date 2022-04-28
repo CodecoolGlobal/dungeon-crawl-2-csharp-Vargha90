@@ -7,17 +7,17 @@ namespace DungeonCrawl.Actors
 {
     public abstract class Actor : MonoBehaviour
     {
-        public (int x, int y) Position
+        public (int x, int y, int z) Position
         {
             get => _position;
             set
             {
                 _position = value;
-                transform.position = new Vector3(value.x, value.y, Z);
+                transform.position = new Vector3(value.x, value.y, value.z=Z);
             }
         }
 
-        private (int x, int y) _position;
+        private (int x, int y, int z) _position;
         private SpriteRenderer _spriteRenderer;
 
         protected virtual void Awake()
@@ -40,8 +40,8 @@ namespace DungeonCrawl.Actors
         protected virtual void TryMove(Direction direction)
         {
             var vector = direction.ToVector();
-            (int x, int y) targetPosition = (Position.x + vector.x, Position.y + vector.y);
-            (int x, int y) currentPosition = (Position.x, Position.y);
+            (int x, int y, int z) targetPosition = (Position.x + vector.x, Position.y + vector.y, Position.z);
+            (int x, int y, int z) currentPosition = (Position.x, Position.y, Position.z);
 
             var actorAtTargetPosition = ActorManager.Singleton.GetActorAt(targetPosition);
             var playerActor = ActorManager.Singleton.GetActorAt(currentPosition);

@@ -8,8 +8,9 @@ namespace DungeonCrawl.Core
     public class GameManager : MonoBehaviour
     {
         private void Start()
-        {
+        {// map change condition here
             MapLoader.LoadMap(1);
+            MapLoader.LoadMap(2);
         }
     }
 }

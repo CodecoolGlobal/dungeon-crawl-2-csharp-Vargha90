@@ -12,18 +12,18 @@ namespace DungeonCrawl
 
     public static class Utilities
     {
-        public static (int x, int y) ToVector(this Direction dir)
+        public static (int x, int y, int z) ToVector(this Direction dir)
         {
             switch (dir)
             {
                 case Direction.Up:
-                    return (0, 1);
+                    return (0, 1, 0);
                 case Direction.Down:
-                    return (0, -1);
+                    return (0, -1, 0);
                 case Direction.Left:
-                    return (-1, 0);
+                    return (-1, 0, 0);
                 case Direction.Right:
-                    return (1, 0);
+                    return (1, 0, 0);
                 default:
                     throw new ArgumentOutOfRangeException(nameof(dir), dir, null);
             }
