@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{A28853D7-EB47-D23C-0544-696F7290D9B3}</ProjectGuid>
+    <ProjectGuid>{3B4D7A7B-B193-C7B8-731F-3F701A73DF6D}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -63,7 +63,6 @@
     <Compile Include="Assets\Source\Actors\Actor.cs" />
     <Compile Include="Assets\Source\Actors\Static\Key.cs" />
     <Compile Include="Assets\Source\Actors\Characters\Player.cs" />
-    <Compile Include="Assets\Source\Actors\Characters\Spider.cs" />
     <Compile Include="Assets\Source\Actors\Static\Grass.cs" />
     <Compile Include="Assets\Source\Actors\Characters\Character.cs" />
     <Compile Include="Assets\Source\Actors\Static\Door.cs" />
@@ -79,6 +78,7 @@
     <Compile Include="Assets\Source\Actors\Static\Bridge.cs" />
     <Compile Include="Assets\Source\Actors\Static\Road.cs" />
     <Compile Include="Assets\Source\Actors\Static\Flower.cs" />
+    <Compile Include="Assets\Source\Actors\Characters\Spider.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
