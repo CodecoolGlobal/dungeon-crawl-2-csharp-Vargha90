@@ -21,24 +21,28 @@ namespace DungeonCrawl.Actors.Characters
             {
                 // Move up
                 TryMove(Direction.Up);
+                CameraController.Singleton.Position = this.Position;
             }
 
             if (Input.GetKeyDown(KeyCode.S))
             {
                 // Move down
                 TryMove(Direction.Down);
+                CameraController.Singleton.Position = this.Position;
             }
 
             if (Input.GetKeyDown(KeyCode.A))
             {
                 // Move left
                 TryMove(Direction.Left);
+                CameraController.Singleton.Position = this.Position;
             }
 
             if (Input.GetKeyDown(KeyCode.D))
             {
                 // Move right
                 TryMove(Direction.Right);
+                CameraController.Singleton.Position = this.Position;
             }
 
             if (Input.GetKeyDown(KeyCode.E))
@@ -73,6 +77,11 @@ namespace DungeonCrawl.Actors.Characters
             UserInterface.Singleton.SetText("YOU DIED...", UserInterface.TextPosition.MiddleCenter);
             Debug.Log("Oh no, I'm dead!");
         }
+
+        //public void SetPosition((int x, int y) position)
+        //{
+        //    PlayerPosition = position;
+        //}
 
         public override int DefaultSpriteId => 24;
         public override string DefaultName => "Player";

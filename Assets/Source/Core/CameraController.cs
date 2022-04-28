@@ -21,7 +21,7 @@ namespace DungeonCrawl.Core
             set
             {
                 _position = value;
-                transform.position = new Vector3(value.x, value.y + 0.5f, -10);
+                transform.position = new Vector3(value.x, value.y + 0.5f *-1, -10);
             }
         }
 
