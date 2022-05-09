@@ -5,7 +5,7 @@ namespace Assets.Source.Actors.Characters
 {
     internal class Boss : Character
     {
-        public static int getZ = -1;
+        public static int getZ = -2;
         // 707 for targetPlayer && 708 for PlayerDead
         public override int DefaultSpriteId => 706;
 

@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using System.Security.Cryptography.X509Certificates;
 using DungeonCrawl.Core;
 using UnityEngine;
 
@@ -7,7 +6,7 @@ namespace DungeonCrawl.Actors.Characters
 {
     public class Skeleton : Character
     {
-        public static int getZ = -1;
+        public static int getZ = -2;
         protected override void Awake()
         {
             base.Awake();
@@ -61,11 +60,13 @@ namespace DungeonCrawl.Actors.Characters
         public override bool OnCollision(Actor anotherActor)
         {
             ApplyDamage(Strength);
+            AudioManager.PlayHitSound("skeleton");
             return false;
         }
 
         protected override void OnDeath()
         {
+            AudioManager.PlayDeathSound("skeleton");
             Debug.Log("Well, I was already dead anyway...");
         }
 
