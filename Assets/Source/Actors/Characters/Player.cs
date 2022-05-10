@@ -8,7 +8,7 @@ namespace DungeonCrawl.Actors.Characters
 {
     public class Player : Character
     {
-        public static int getZ = -1;
+        public static int getZ = -2;
         public override int DefaultSpriteId => 24;
         public override string DefaultName => "Player";
 
@@ -56,9 +56,10 @@ namespace DungeonCrawl.Actors.Characters
             if (Input.GetKeyDown(KeyCode.E))
             {
                 // Pick up or interact
-                Item item = ActorManager.Singleton.GetActorAt<Item>((Position.x, Position.y, 0));
+                Item item = ActorManager.Singleton.GetActorAt<Item>((Position.x, Position.y, -1));
                 if (item != null)
                 {
+                    AudioManager.PlayActionSound("collect");
                     ActorManager.Singleton.DestroyActor(item);
                 }
             }
@@ -81,12 +82,10 @@ namespace DungeonCrawl.Actors.Characters
 
         protected override void OnDeath()
         {
+            AudioManager.PlayDeathSound("player");
             UserInterface.Singleton.SetText("Health: 0", UserInterface.TextPosition.TopLeft);
             UserInterface.Singleton.SetText("YOU DIED...", UserInterface.TextPosition.MiddleCenter);
             Debug.Log("Oh no, I'm dead!");
         }
-
-
-
     }
 }
