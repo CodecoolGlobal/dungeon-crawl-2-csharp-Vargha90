@@ -18,7 +18,7 @@ namespace Assets.Source.Actors.Characters
             base.Awake();
             SetHealth(50);
             SetStrength(5);
-            InvokeRepeating(nameof(GetDirectionToMove), 2.0f, 2.0f);
+            InvokeRepeating(nameof(GetDirectionToMove), 0.2f, 0.2f);
         }
 
         

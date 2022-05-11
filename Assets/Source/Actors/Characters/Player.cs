@@ -16,10 +16,10 @@ namespace DungeonCrawl.Actors.Characters
         {
             base.Awake();
             SetHealth(100);
-            InvokeRepeating(nameof(Movement), 0.05f, 0.05f);
+            InvokeRepeating(nameof(Movement), 0.09f, 0.09f);
         }
 
-        protected  void Movement()
+        protected void Movement()
         {
             UserInterface.Singleton.SetText("Health: " + Health.ToString(), UserInterface.TextPosition.TopLeft);
             if (Input.GetKey(KeyCode.W))
@@ -54,7 +54,7 @@ namespace DungeonCrawl.Actors.Characters
                 //Debug.Log(Position);
             }
 
-            if (Input.GetKeyDown(KeyCode.E))
+            if (Input.GetKey(KeyCode.E))
             {
                 // Pick up or interact
                 Item item = ActorManager.Singleton.GetActorAt<Item>((Position.x, Position.y, -1));

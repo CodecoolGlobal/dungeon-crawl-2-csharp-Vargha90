@@ -12,12 +12,12 @@ namespace DungeonCrawl.Actors.Characters
             base.Awake();
             SetHealth(30);
             SetStrength(5);
-            InvokeRepeating(nameof(Attack), 1.0f, 1.0f);
+            InvokeRepeating(nameof(Attack), 0.2f, 0.2f);
         }
 
         
 
-        protected  void Attack()
+        protected void Attack()
         {
             (int x, int y, int z) playerPosition = GetPlayerPosition(GetCoordinatesAroundSkeleton());
             if (playerPosition != (Position.x, Position.y, Position.z))
