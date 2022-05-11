@@ -18,19 +18,11 @@ namespace Assets.Source.Actors.Characters
             base.Awake();
             SetHealth(50);
             SetStrength(5);
+            InvokeRepeating(nameof(GetDirectionToMove), 2.0f, 2.0f);
         }
 
-        protected override void OnUpdate(float deltaTime)
-        {
-            if (Input.GetKeyDown(KeyCode.W) ||
-                Input.GetKeyDown(KeyCode.S) ||
-                Input.GetKeyDown(KeyCode.A) ||
-                Input.GetKeyDown(KeyCode.D) ||
-                Input.GetKeyDown(KeyCode.E))
-            {
-                GetDirectionToMove();
-            }
-        }
+        
+
 
         private void GetDirectionToMove()
         {

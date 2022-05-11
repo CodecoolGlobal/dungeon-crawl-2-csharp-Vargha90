@@ -16,9 +16,10 @@ namespace DungeonCrawl.Actors.Characters
         {
             base.Awake();
             SetHealth(100);
+            InvokeRepeating(nameof(Movement), 0.05f, 0.05f);
         }
 
-        protected override void OnUpdate(float deltaTime)
+        protected  void Movement()
         {
             UserInterface.Singleton.SetText("Health: " + Health.ToString(), UserInterface.TextPosition.TopLeft);
             if (Input.GetKey(KeyCode.W))

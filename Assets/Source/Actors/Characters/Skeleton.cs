@@ -12,22 +12,18 @@ namespace DungeonCrawl.Actors.Characters
             base.Awake();
             SetHealth(30);
             SetStrength(5);
+            InvokeRepeating(nameof(Attack), 1.0f, 1.0f);
         }
 
-        protected override void OnUpdate(float deltaTime)
+        
+
+        protected  void Attack()
         {
-            if (Input.GetKeyDown(KeyCode.W) ||
-                Input.GetKeyDown(KeyCode.S) ||
-                Input.GetKeyDown(KeyCode.A) ||
-                Input.GetKeyDown(KeyCode.D) ||
-                Input.GetKeyDown(KeyCode.E))
+            (int x, int y, int z) playerPosition = GetPlayerPosition(GetCoordinatesAroundSkeleton());
+            if (playerPosition != (Position.x, Position.y, Position.z))
             {
-                (int x, int y, int z) playerPosition = GetPlayerPosition(GetCoordinatesAroundSkeleton());
-                if (playerPosition != (Position.x, Position.y, Position.z))
-                {
-                    var playerActor = ActorManager.Singleton.GetActorAt(playerPosition);
-                    playerActor.OnCollision(this);
-                }
+                var playerActor = ActorManager.Singleton.GetActorAt(playerPosition);
+                playerActor.OnCollision(this);
             }
         }
 

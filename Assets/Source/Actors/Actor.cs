@@ -32,8 +32,12 @@ namespace DungeonCrawl.Actors
 
         private void Update()
         {
-            OnUpdate(Time.deltaTime);
+            OnUpdate();
         }
+
+
+
+
 
         public void SetSprite(int id)
         {
@@ -120,7 +124,7 @@ namespace DungeonCrawl.Actors
         ///     Invoked every animation frame, can be used for movement, character logic, etc
         /// </summary>
         /// <param name="deltaTime">Time (in seconds) since the last animation frame</param>
-        protected virtual void OnUpdate(float deltaTime)
+        protected virtual void OnUpdate()
         {
         }
 
