@@ -21,7 +21,7 @@ namespace DungeonCrawl.Actors.Characters
         protected override void OnUpdate(float deltaTime)
         {
             UserInterface.Singleton.SetText("Health: " + Health.ToString(), UserInterface.TextPosition.TopLeft);
-            if (Input.GetKeyDown(KeyCode.W))
+            if (Input.GetKey(KeyCode.W))
             {
                 // Move up
                 TryMove(Direction.Up);
@@ -29,7 +29,7 @@ namespace DungeonCrawl.Actors.Characters
                 //Debug.Log(Position);
             }
 
-            if (Input.GetKeyDown(KeyCode.S))
+            if (Input.GetKey(KeyCode.S))
             {
                 // Move down
                 TryMove(Direction.Down);
@@ -37,7 +37,7 @@ namespace DungeonCrawl.Actors.Characters
                 //Debug.Log(Position);
             }
 
-            if (Input.GetKeyDown(KeyCode.A))
+            if (Input.GetKey(KeyCode.A))
             {
                 // Move left
                 TryMove(Direction.Left);
@@ -45,7 +45,7 @@ namespace DungeonCrawl.Actors.Characters
                 //Debug.Log(Position);
             }
 
-            if (Input.GetKeyDown(KeyCode.D))
+            if (Input.GetKey(KeyCode.D))
             {
                 // Move right
                 TryMove(Direction.Right);
