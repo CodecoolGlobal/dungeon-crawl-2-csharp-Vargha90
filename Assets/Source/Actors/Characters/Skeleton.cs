@@ -7,6 +7,8 @@ namespace DungeonCrawl.Actors.Characters
     public class Skeleton : Character
     {
         public static int getZ = -2;
+        public override int DefaultSpriteId => 316;
+        public override string DefaultName => "Skeleton";
         protected override void Awake()
         {
             base.Awake();
@@ -66,7 +68,6 @@ namespace DungeonCrawl.Actors.Characters
             Debug.Log("Well, I was already dead anyway...");
         }
 
-        public override int DefaultSpriteId => 316;
-        public override string DefaultName => "Skeleton";
+        
     }
 }

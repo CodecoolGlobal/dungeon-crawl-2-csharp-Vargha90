@@ -9,7 +9,7 @@ namespace DungeonCrawl.Actors.Characters
     public class Player : Character
     {
         public bool timerRunning = true;
-        private float countdown = 40;
+        private float countdown = 4;
         public static int getZ = -2;
         public override int DefaultSpriteId => 24;
         public override string DefaultName => "Player";
@@ -28,7 +28,7 @@ namespace DungeonCrawl.Actors.Characters
                 countdown -= Time.smoothDeltaTime;
                 if (countdown <= 0)
                 {
-                    this.OnDeath("DEAD LOLOLO");
+                    this.OnDeath("DEAD HAHAHAHAHA");
                     timerRunning = false;
                 }
             }
@@ -101,7 +101,10 @@ namespace DungeonCrawl.Actors.Characters
             }
             else if (anotherActor is Boss)
             {
-                Debug.Log("YOU CAN'T KILL ME FOOL!"); 
+                anotherActor.transform.localScale = new Vector2(1f, 1f);
+                anotherActor.transform.localPosition = new Vector2(21f, -23f);
+
+                ////Debug.Log("YOU CAN'T KILL ME FOOL!");
             }
             return false;
         }
@@ -119,6 +122,7 @@ namespace DungeonCrawl.Actors.Characters
             SetHealth(0);
             UserInterface.Singleton.SetText(deathMessage, UserInterface.TextPosition.MiddleCenter);
             ActorManager.Singleton.DestroyActor(this);
+            AudioManager.PlayDeathSound("kefka");
             Debug.Log("Oh no, the Boss killed me :(");
         }
     }

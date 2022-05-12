@@ -1,18 +1,22 @@
 ﻿using Assets.Source.Core;
+using DungeonCrawl;
 using DungeonCrawl.Actors;
 using DungeonCrawl.Actors.Characters;
 using DungeonCrawl.Core;
 using UnityEngine;
 
+
 namespace Assets.Source.Actors.Characters
 {
     internal class Boss : Character
     {
+        private bool _getBigger = true;
         public static int getZ = -2;
         // 707 for targetPlayer && 708 for PlayerDead
         public override int DefaultSpriteId => 706;
 
         public override string DefaultName => "Boss";
+
 
         protected override void OnDeath()
         {
@@ -27,23 +31,26 @@ namespace Assets.Source.Actors.Characters
 
         public override bool OnCollision(Actor anotherActor)
         {
-            if (anotherActor == this)
-            {
-                transform.localScale = new Vector2(2f, 2f);
-                return true;
-            }
-            transform.localScale = new Vector2(1f, 1f);
+            transform.localScale = new Vector2(15f, 15f);
+            transform.position = new Vector2(Utilities.random.Next(18, 28), Utilities.random.Next(-28, -18));
+            Debug.Log("HAHAHA");
             return false;
         }
 
         protected void Attack()
         {
             (int x, int y, int z) playerPosition = GetPlayerPosition(GetSurroundingCoordinates());
+            //Debug.Log(playerPosition);
             if (playerPosition != (Position.x, Position.y, Position.z))
             {
                 var playerActor = ActorManager.Singleton.GetActorAt(playerPosition);
                 playerActor.OnCollision(this);
             }
+        }
+
+        protected override void OnUpdate()
+        {
+            Attack();
         }
     }
 }

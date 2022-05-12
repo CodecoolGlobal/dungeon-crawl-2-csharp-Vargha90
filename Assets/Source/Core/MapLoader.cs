@@ -138,7 +138,6 @@ namespace DungeonCrawl.Core
                 case '+':
                     position.z = Tree.getZ;
                     ActorManager.Singleton.Spawn<Tree>(position);
-                    //ActorManager.Singleton.Spawn<Grass>(position);
                     break;
                 case '|':
                     position.z = Road.getZ;
@@ -147,7 +146,6 @@ namespace DungeonCrawl.Core
                 case '*':
                     position.z = Flower.getZ;
                     ActorManager.Singleton.Spawn<Flower>(position);
-                    //ActorManager.Singleton.Spawn<Grass>(position);
                     break;
                 case '=':
                     position.z = Bridge.getZ;
