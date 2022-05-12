@@ -90,6 +90,11 @@ namespace DungeonCrawl.Actors
                 {
                     AudioManager.PlayVocal("no");
                 }
+
+                else if (actorAtTargetPosition is Boss)
+                {
+                    actorAtTargetPosition.OnCollision(playerActor);
+                }
                 else if (actorAtTargetPosition.OnCollision(this))
                 {
                     // Allowed to move

@@ -1,5 +1,7 @@
 ﻿using Assets.Source.Core;
+using DungeonCrawl.Actors;
 using DungeonCrawl.Actors.Characters;
+using UnityEngine;
 
 namespace Assets.Source.Actors.Characters
 {
@@ -14,6 +16,22 @@ namespace Assets.Source.Actors.Characters
         protected override void OnDeath()
         {
             UserInterface.Singleton.SetText("Noooo, you can't kill me!", UserInterface.TextPosition.MiddleCenter);
+        }
+
+        private void Start()
+        {
+            var sprite = GetComponent<SpriteRenderer>();
+            sprite.color = Color.red;
+        }
+
+        public override bool OnCollision(Actor anotherActor)
+        {
+            if (anotherActor == this)
+            {
+                transform.localScale = new Vector2(2f, 2f);
+            }
+            transform.localScale = new Vector2(1f, 1f);
+            return false;
         }
     }
 }

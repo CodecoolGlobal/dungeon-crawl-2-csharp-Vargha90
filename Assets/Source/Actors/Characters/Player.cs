@@ -21,7 +21,7 @@ namespace DungeonCrawl.Actors.Characters
             InvokeRepeating(nameof(Movement), 0.09f, 0.09f);
         }
 
-        private void Update()
+        protected override void OnUpdate()
         {
             if (MapLoader.MapId == 2 && timerRunning)
             {
@@ -32,7 +32,7 @@ namespace DungeonCrawl.Actors.Characters
                 }
                 else
                 {
-                    this.OnDeath("DEAD LOLOLO?");
+                    this.OnDeath("DEAD LOLOLO");
                     timerRunning = false;
                 }
             }
@@ -103,10 +103,10 @@ namespace DungeonCrawl.Actors.Characters
                 SetStrength(5);
                 ApplyDamage(Strength);
             }
-            //else if(anotherActor is Boss)
-            //{
-
-            //}
+            else if (anotherActor is Boss)
+            {
+                Debug.Log("YOU CAN'T KILL ME FOOL!"); 
+            }
             return false;
         }
 
@@ -123,6 +123,7 @@ namespace DungeonCrawl.Actors.Characters
             SetHealth(0);
             UserInterface.Singleton.SetText(deathMessage, UserInterface.TextPosition.MiddleCenter);
             ActorManager.Singleton.DestroyActor(this);
+            Debug.Log("Oh no, the Boss killed me :(");
         }
     }
 }

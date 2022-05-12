@@ -131,7 +131,7 @@ namespace Assets.Source.Actors.Characters
         protected override void OnDeath()
         {
             AudioManager.PlayDeathSound("spider");
-            Debug.Log("Well, I was already dead anyway...");
+            Debug.Log("Sssssssssssssso long..." );
         }
 
         public override int DefaultSpriteId => 267;
