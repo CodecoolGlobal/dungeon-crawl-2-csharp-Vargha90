@@ -9,7 +9,7 @@ namespace DungeonCrawl.Actors.Characters
     public class Player : Character
     {
         public bool timerRunning = true;
-        private float countdown = 10;
+        private float countdown = 40;
         public static int getZ = -2;
         public override int DefaultSpriteId => 24;
         public override string DefaultName => "Player";
@@ -120,7 +120,9 @@ namespace DungeonCrawl.Actors.Characters
 
         protected override void OnDeath(string deathMessage)
         {
+            SetHealth(0);
             UserInterface.Singleton.SetText(deathMessage, UserInterface.TextPosition.MiddleCenter);
+            ActorManager.Singleton.DestroyActor(this);
         }
     }
 }
