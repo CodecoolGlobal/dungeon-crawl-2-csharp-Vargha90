@@ -61,11 +61,13 @@
     <Compile Include="Assets\Source\Actors\Static\Floor.cs" />
     <Compile Include="Assets\Source\Core\CameraController.cs" />
     <Compile Include="Assets\Source\Core\UserInterface.cs" />
+    <Compile Include="Assets\Source\Actors\Static\StashedItem.cs" />
     <Compile Include="Assets\Source\Actors\Static\Stairs.cs" />
     <Compile Include="Assets\Source\Actors\Actor.cs" />
     <Compile Include="Assets\Source\Actors\Static\Tree.cs" />
     <Compile Include="Assets\Source\Core\AudioManager.cs" />
     <Compile Include="Assets\Source\Actors\Static\Key.cs" />
+    <Compile Include="Assets\Source\Core\InventoryDisplay.cs" />
     <Compile Include="Assets\Source\Actors\Characters\Player.cs" />
     <Compile Include="Assets\Source\Actors\Static\Grass.cs" />
     <Compile Include="Assets\Source\Actors\Characters\Boss.cs" />
