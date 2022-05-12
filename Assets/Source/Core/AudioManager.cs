@@ -8,9 +8,18 @@ public class AudioManager : MonoBehaviour
 {
     public static AudioClip level1, level2, stoneStep, grassStep, hitSkeleton, hitSpider, deathSkeleton, deathSpider, birds, river, wrongWay, collect, transfer, deathPlayer;
     static AudioSource audioSrc;
+    public static AudioManager Singleton;
 
-    void Start()
+    public void Awake()
     {
+        if (Singleton != null)
+        {
+            Destroy(this);
+            return;
+        }
+
+        Singleton = this;
+
         level1 = Resources.Load<AudioClip>("level1_background");
         level2 = Resources.Load<AudioClip>("level2_background");
         stoneStep = Resources.Load<AudioClip>("step_stone");
