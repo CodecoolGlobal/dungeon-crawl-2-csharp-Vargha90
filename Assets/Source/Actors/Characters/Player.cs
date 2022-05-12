@@ -135,8 +135,8 @@ namespace DungeonCrawl.Actors.Characters
             SetHealth(0);
             UserInterface.Singleton.SetText(deathMessage, UserInterface.TextPosition.MiddleCenter);
             ActorManager.Singleton.DestroyActor(this);
-            AudioManager.StopBGMusic();
-            AudioManager.PlayDeathSound("game_over");
+            AudioManager.Singleton.StopBGMusic();
+            AudioManager.Singleton.PlayDeathSound("game_over");
             Debug.Log("Oh no, the Boss killed me :(");
         }
     }

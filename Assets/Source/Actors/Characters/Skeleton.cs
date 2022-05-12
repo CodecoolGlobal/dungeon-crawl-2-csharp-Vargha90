@@ -9,6 +9,11 @@ namespace DungeonCrawl.Actors.Characters
         public static int getZ = -2;
 
         public override char Symbol => 's';
+
+        public override int DefaultSpriteId => 23;
+
+        public override string DefaultName => "Skeleton";
+
         protected override void Awake()
         {
             base.Awake();

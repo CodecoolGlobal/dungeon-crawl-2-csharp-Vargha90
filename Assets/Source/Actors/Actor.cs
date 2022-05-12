@@ -95,7 +95,7 @@ namespace DungeonCrawl.Actors
                 else if (actorAtTargetPosition is Boss)
                 {
                     actorAtTargetPosition.OnCollision(playerActor);
-                    AudioManager.PlayHitSound("boss");
+                    AudioManager.Singleton.PlayHitSound("boss");
                 }
                 else if (actorAtTargetPosition.OnCollision(this))
                 {

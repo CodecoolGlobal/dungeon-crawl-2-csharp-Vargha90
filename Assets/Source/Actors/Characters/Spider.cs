@@ -130,7 +130,7 @@ namespace Assets.Source.Actors.Characters
 
         protected override void OnDeath()
         {
-            AudioManager.PlayDeathSound("spider");
+            AudioManager.Singleton.PlayDeathSound("spider");
             Debug.Log("Sssssssssssssso long..." );
         }
 
