@@ -16,7 +16,7 @@ namespace Assets.Source.Core
 
         public static void GetEachActor()
         {
-            List<Data> ActorList = new List<Data>();
+            ArrayOfData ActorList = new ArrayOfData();
             foreach (Actor actor in ActorManager.Singleton.GetAllActors())
             {
                 X = actor.Position.x;
@@ -25,7 +25,7 @@ namespace Assets.Source.Core
                 ActorName = actor.name;
 
                 Data data = new Data();
-                ActorList.Add(data);
+                ActorList.ActorList.Add(data);
             }
             WriteToFile(ActorList);
         }
@@ -39,16 +39,33 @@ namespace Assets.Source.Core
             public string name = ActorName;
         }
 
-        public static void WriteToFile(List<Data> ActorList)
+        [System.Serializable]
+        public class ArrayOfData
         {
-            string result = "";
-            foreach (Data actor in ActorList)
-            {
-                string strOutput = JsonUtility.ToJson(actor);
-                result += $"{strOutput}\n";
-            }
+            public List<Data> ActorList;
 
-            File.WriteAllText(Application.dataPath + "/savegame.txt", result);
+            public ArrayOfData()
+            {
+                ActorList = new List<Data>();
+            }
+        }
+
+        private static void WriteToFile(ArrayOfData ActorList)
+        {
+            string strOutput = JsonUtility.ToJson(ActorList, true);
+
+            File.WriteAllText(Application.dataPath + "/savegame.json", strOutput);
+        }
+
+        public static void ReadFromJson()
+        {
+            string fileText = File.ReadAllText(Application.dataPath + "/savegame.json");
+            ArrayOfData ActorsFromJson = JsonUtility.FromJson<ArrayOfData>(fileText);
+
+            foreach (Data data in ActorsFromJson.ActorList)
+            {
+                Debug.Log(data.name);
+            }
         }
     }
 }

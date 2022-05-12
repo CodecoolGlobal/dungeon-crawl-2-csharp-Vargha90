@@ -8,6 +8,7 @@ using Tree = Assets.Source.Actors.Static.Tree;
 
 namespace DungeonCrawl.Actors
 {
+    [System.Serializable]
     public abstract class Actor : MonoBehaviour
     {
         public (int x, int y, int z) Position

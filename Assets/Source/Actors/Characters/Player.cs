@@ -70,6 +70,11 @@ namespace DungeonCrawl.Actors.Characters
             {
                 HandleJson.GetEachActor();
             }
+
+            if (Input.GetKeyDown(KeyCode.L))
+            {
+                HandleJson.ReadFromJson();
+            }
         }
 
         public override bool OnCollision(Actor anotherActor)
