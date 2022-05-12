@@ -10,7 +10,6 @@ namespace Assets.Source.Actors.Characters
 {
     internal class Boss : Character
     {
-        private bool _getBigger = true;
         public static int getZ = -2;
         // 707 for targetPlayer && 708 for PlayerDead
         public override int DefaultSpriteId => 706;
