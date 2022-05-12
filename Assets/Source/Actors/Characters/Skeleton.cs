@@ -19,7 +19,7 @@ namespace DungeonCrawl.Actors.Characters
 
         protected void Attack()
         {
-            (int x, int y, int z) playerPosition = GetPlayerPosition(GetCoordinatesAroundSkeleton());
+            (int x, int y, int z) playerPosition = GetPlayerPosition(GetSurroundingCoordinates());
             if (playerPosition != (Position.x, Position.y, Position.z))
             {
                 var playerActor = ActorManager.Singleton.GetActorAt(playerPosition);
@@ -27,31 +27,31 @@ namespace DungeonCrawl.Actors.Characters
             }
         }
 
-        private List<(int x, int y, int z)> GetCoordinatesAroundSkeleton()
-        {
-            List<(int x, int y, int z)> aroundSkeleton = new List<(int x, int y, int z)>();
-            (int x, int y, int z) skeletonPosition = (Position.x, Position.y, Position.z);
+        //private List<(int x, int y, int z)> GetCoordinatesAroundSkeleton()
+        //{
+        //    List<(int x, int y, int z)> aroundSkeleton = new List<(int x, int y, int z)>();
+        //    (int x, int y, int z) skeletonPosition = (Position.x, Position.y, Position.z);
 
-            aroundSkeleton.Add((skeletonPosition.x + 1, skeletonPosition.y, skeletonPosition.z));
-            aroundSkeleton.Add((skeletonPosition.x - 1, skeletonPosition.y, skeletonPosition.z));
-            aroundSkeleton.Add((skeletonPosition.x, skeletonPosition.y + 1, skeletonPosition.z));
-            aroundSkeleton.Add((skeletonPosition.x, skeletonPosition.y - 1, skeletonPosition.z));
+        //    aroundSkeleton.Add((skeletonPosition.x + 1, skeletonPosition.y, skeletonPosition.z));
+        //    aroundSkeleton.Add((skeletonPosition.x - 1, skeletonPosition.y, skeletonPosition.z));
+        //    aroundSkeleton.Add((skeletonPosition.x, skeletonPosition.y + 1, skeletonPosition.z));
+        //    aroundSkeleton.Add((skeletonPosition.x, skeletonPosition.y - 1, skeletonPosition.z));
 
-            return aroundSkeleton;
-        }
+        //    return aroundSkeleton;
+        //}
 
-        private (int x, int y, int z) GetPlayerPosition(List<(int x, int y, int z)> aroundSkeleton)
-        {
-            foreach (var position in aroundSkeleton)
-            {
-                if (ActorManager.Singleton.GetActorAt(position) is Player)
-                {
-                    return position;
-                }
-            }
+        //private (int x, int y, int z) GetPlayerPosition(List<(int x, int y, int z)> aroundSkeleton)
+        //{
+        //    foreach (var position in aroundSkeleton)
+        //    {
+        //        if (ActorManager.Singleton.GetActorAt(position) is Player)
+        //        {
+        //            return position;
+        //        }
+        //    }
 
-            return (Position.x, Position.y, Position.z);
-        }
+        //    return (Position.x, Position.y, Position.z);
+        //}
 
         public override bool OnCollision(Actor anotherActor)
         {

@@ -1,4 +1,5 @@
 ﻿using DungeonCrawl.Core;
+using System.Collections.Generic;
 
 namespace DungeonCrawl.Actors.Characters
 {
@@ -37,6 +38,32 @@ namespace DungeonCrawl.Actors.Characters
         ///     All characters are drawn "above" floor etc
         /// </summary>
         public override int Z => -2;
+
+        protected virtual List<(int x, int y, int z)> GetSurroundingCoordinates()
+        {
+            List<(int x, int y, int z)> aroundActor = new List<(int x, int y, int z)>();
+            (int x, int y, int z) actorPosition = (Position.x, Position.y, Position.z);
+
+            aroundActor.Add((actorPosition.x + 1, actorPosition.y, actorPosition.z));
+            aroundActor.Add((actorPosition.x - 1, actorPosition.y, actorPosition.z));
+            aroundActor.Add((actorPosition.x, actorPosition.y + 1, actorPosition.z));
+            aroundActor.Add((actorPosition.x, actorPosition.y - 1, actorPosition.z));
+
+            return aroundActor;
+        }
+
+        protected virtual (int x, int y, int z) GetPlayerPosition(List<(int x, int y, int z)> aroundEnemy)
+        {
+            foreach (var position in aroundEnemy)
+            {
+                if (ActorManager.Singleton.GetActorAt(position) is Player)
+                {
+                    return position;
+                }
+            }
+
+            return (Position.x, Position.y, Position.z);
+        }
 
     }
 }

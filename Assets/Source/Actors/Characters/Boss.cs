@@ -1,6 +1,7 @@
 ﻿using Assets.Source.Core;
 using DungeonCrawl.Actors;
 using DungeonCrawl.Actors.Characters;
+using DungeonCrawl.Core;
 using UnityEngine;
 
 namespace Assets.Source.Actors.Characters
@@ -29,9 +30,20 @@ namespace Assets.Source.Actors.Characters
             if (anotherActor == this)
             {
                 transform.localScale = new Vector2(2f, 2f);
+                return true;
             }
             transform.localScale = new Vector2(1f, 1f);
             return false;
+        }
+
+        protected void Attack()
+        {
+            (int x, int y, int z) playerPosition = GetPlayerPosition(GetSurroundingCoordinates());
+            if (playerPosition != (Position.x, Position.y, Position.z))
+            {
+                var playerActor = ActorManager.Singleton.GetActorAt(playerPosition);
+                playerActor.OnCollision(this);
+            }
         }
     }
 }

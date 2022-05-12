@@ -81,18 +81,18 @@ namespace Assets.Source.Actors.Characters
             }
         }
 
-        private (int x, int y, int z) GetPlayerPosition(List<(int x, int y, int z)> aroundSpider)
-        {
-            foreach (var position in aroundSpider)
-            {
-                if (ActorManager.Singleton.GetActorAt(position) is Player)
-                {
-                    return position;
-                }
-            }
+        //private (int x, int y, int z) GetPlayerPosition(List<(int x, int y, int z)> aroundSpider)
+        //{
+        //    foreach (var position in aroundSpider)
+        //    {
+        //        if (ActorManager.Singleton.GetActorAt(position) is Player)
+        //        {
+        //            return position;
+        //        }
+        //    }
 
-            return (Position.x, Position.y, Position.z);
-        }
+        //    return (Position.x, Position.y, Position.z);
+        //}
 
         private List<(int x, int y, int z)> GetCoordinatesAroundSpider((int x, int y, int z) spiderPosition, int rangeToCheck)
         {

@@ -26,11 +26,7 @@ namespace DungeonCrawl.Actors.Characters
             if (MapLoader.MapId == 2 && timerRunning)
             {
                 countdown -= Time.smoothDeltaTime;
-                if (countdown >= 0)
-                {
-                    Debug.Log(countdown);
-                }
-                else
+                if (countdown <= 0)
                 {
                     this.OnDeath("DEAD LOLOLO");
                     timerRunning = false;
