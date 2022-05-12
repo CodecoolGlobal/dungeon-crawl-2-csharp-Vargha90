@@ -18,12 +18,13 @@ namespace DungeonCrawl.Actors.Characters
         {
             base.Awake();
             SetHealth(100);
+            InvokeRepeating(nameof(Movement), 0.09f, 0.09f);
         }
 
-        protected override void OnUpdate(float deltaTime)
+        protected void Movement()
         {
             UserInterface.Singleton.SetText("Health: " + Health.ToString(), UserInterface.TextPosition.TopLeft);
-            if (Input.GetKeyDown(KeyCode.W))
+            if (Input.GetKey(KeyCode.W))
             {
                 // Move up
                 TryMove(Direction.Up);
@@ -31,7 +32,7 @@ namespace DungeonCrawl.Actors.Characters
                 //Debug.Log(Position);
             }
 
-            if (Input.GetKeyDown(KeyCode.S))
+            if (Input.GetKey(KeyCode.S))
             {
                 // Move down
                 TryMove(Direction.Down);
@@ -39,7 +40,7 @@ namespace DungeonCrawl.Actors.Characters
                 //Debug.Log(Position);
             }
 
-            if (Input.GetKeyDown(KeyCode.A))
+            if (Input.GetKey(KeyCode.A))
             {
                 // Move left
                 TryMove(Direction.Left);
@@ -47,7 +48,7 @@ namespace DungeonCrawl.Actors.Characters
                 //Debug.Log(Position);
             }
 
-            if (Input.GetKeyDown(KeyCode.D))
+            if (Input.GetKey(KeyCode.D))
             {
                 // Move right
                 TryMove(Direction.Right);
@@ -55,7 +56,7 @@ namespace DungeonCrawl.Actors.Characters
                 //Debug.Log(Position);
             }
 
-            if (Input.GetKeyDown(KeyCode.E))
+            if (Input.GetKey(KeyCode.E))
             {
                 // Pick up or interact
                 Item item = ActorManager.Singleton.GetActorAt<Item>((Position.x, Position.y, -1));
