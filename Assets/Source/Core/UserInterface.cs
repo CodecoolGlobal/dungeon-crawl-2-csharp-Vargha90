@@ -1,5 +1,6 @@
 ﻿using TMPro;
 using UnityEngine;
+using DungeonCrawl.Core;
 
 namespace Assets.Source.Core
 {
@@ -49,6 +50,11 @@ namespace Assets.Source.Core
         public void SetText(string text, TextPosition textPosition)
         {
             _textComponents[(int) textPosition].text = text;
+            if (MapLoader.MapId == 2)
+            {
+                _textComponents[(int) textPosition].color = Color.white;
+            }
+            
         }
     }
 }
