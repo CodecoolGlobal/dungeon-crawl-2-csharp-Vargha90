@@ -8,6 +8,8 @@ namespace DungeonCrawl.Actors.Characters
 {
     public class Player : Character
     {
+        public bool timerRunning = true;
+        private float countdown = 10;
         public static int getZ = -2;
         public override int DefaultSpriteId => 24;
         public override string DefaultName => "Player";
@@ -18,6 +20,29 @@ namespace DungeonCrawl.Actors.Characters
             SetHealth(100);
             InvokeRepeating(nameof(Movement), 0.09f, 0.09f);
         }
+
+        private void Update()
+        {
+            if (MapLoader.MapId == 2 && timerRunning)
+            {
+                countdown -= Time.smoothDeltaTime;
+                if (countdown >= 0)
+                {
+                    Debug.Log(countdown);
+                }
+                else
+                {
+                    Debug.Log("Done");
+                    timerRunning = false;
+                }
+            }
+            else if (MapLoader.MapId == 1)
+            {
+                countdown = 10;
+                timerRunning = true;
+            }
+        }
+
 
         protected void Movement()
         {
@@ -78,6 +103,10 @@ namespace DungeonCrawl.Actors.Characters
                 SetStrength(5);
                 ApplyDamage(Strength);
             }
+            //else if(anotherActor is Boss)
+            //{
+
+            //}
             return false;
         }
 
