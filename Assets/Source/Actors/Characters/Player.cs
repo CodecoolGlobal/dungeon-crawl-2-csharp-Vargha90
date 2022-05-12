@@ -1,4 +1,6 @@
-﻿using Assets.Source.Actors.Characters;
+﻿using System.Collections.Generic;
+using System.Runtime.CompilerServices;
+using Assets.Source.Actors.Characters;
 using Assets.Source.Actors.Static;
 using Assets.Source.Core;
 using DungeonCrawl.Core;
@@ -62,6 +64,11 @@ namespace DungeonCrawl.Actors.Characters
                     AudioManager.PlayActionSound("collect");
                     ActorManager.Singleton.DestroyActor(item);
                 }
+            }
+
+            if (Input.GetKeyDown(KeyCode.K))
+            {
+                HandleJson.GetEachActor();
             }
         }
 
