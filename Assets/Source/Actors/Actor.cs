@@ -8,6 +8,7 @@ using Tree = Assets.Source.Actors.Static.Tree;
 
 namespace DungeonCrawl.Actors
 {
+    [System.Serializable]
     public abstract class Actor : MonoBehaviour
     {
         public (int x, int y, int z) Position
@@ -61,11 +62,11 @@ namespace DungeonCrawl.Actors
                 var floorType = ActorManager.Singleton.GetActorAt((Position.x, Position.y, 0));
                 if (floorType is Floor || floorType is Road || floorType is Bridge)
                 {
-                    AudioManager.PlayStepSound("stone");
+                    AudioManager.Singleton.PlayStepSound("stone");
                 }
                 else if (floorType is Grass)
                 {
-                    AudioManager.PlayStepSound("grass");
+                    AudioManager.Singleton.PlayStepSound("grass");
                 }
             }
             else
@@ -88,7 +89,7 @@ namespace DungeonCrawl.Actors
                 else if (actorAtTargetPosition is Wall || actorAtTargetPosition is Tree ||
                          actorAtTargetPosition is River)
                 {
-                    AudioManager.PlayVocal("no");
+                    AudioManager.Singleton.PlayVocal("no");
                 }
 
                 else if (actorAtTargetPosition is Boss)
@@ -103,11 +104,11 @@ namespace DungeonCrawl.Actors
                     var floorType = ActorManager.Singleton.GetActorAt((Position.x, Position.y, 0));
                     if (floorType is Floor || floorType is Road || floorType is Bridge)
                     {
-                        AudioManager.PlayStepSound("stone");
+                        AudioManager.Singleton.PlayStepSound("stone");
                     }
                     else if (floorType is Grass)
                     {
-                        AudioManager.PlayStepSound("grass");
+                        AudioManager.Singleton.PlayStepSound("grass");
                     }
                 }
             }
@@ -143,6 +144,8 @@ namespace DungeonCrawl.Actors
         ///     Z position of this Actor (0 by default)
         /// </summary>
         public virtual int Z => 0;
+
+        public abstract char Symbol { get; }
 
         /// <summary>
         ///     Id of the default sprite of this actor type
