@@ -21,8 +21,6 @@ namespace Assets.Source.Actors.Characters
             InvokeRepeating(nameof(GetDirectionToMove), 0.2f, 0.2f);
         }
 
-        
-
 
         private void GetDirectionToMove()
         {

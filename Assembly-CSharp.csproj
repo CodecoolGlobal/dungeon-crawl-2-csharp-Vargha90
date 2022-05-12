@@ -78,6 +78,7 @@
     <Compile Include="Assets\Source\Core\MapLoader.cs" />
     <Compile Include="Assets\Source\Utilities.cs" />
     <Compile Include="Assets\Source\Actors\Static\Potion.cs" />
+    <Compile Include="Assets\Source\Core\HandleJson.cs" />
     <Compile Include="Assets\Source\Actors\Static\Meat.cs" />
     <Compile Include="Assets\Source\Actors\Static\River.cs" />
     <Compile Include="Assets\Source\Core\GameManager.cs" />
@@ -101,6 +102,7 @@
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
+    <None Include="Assets\savegame.txt" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
