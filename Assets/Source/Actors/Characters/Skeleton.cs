@@ -7,6 +7,8 @@ namespace DungeonCrawl.Actors.Characters
     public class Skeleton : Character
     {
         public static int getZ = -2;
+
+        public override char Symbol => 's';
         protected override void Awake()
         {
             base.Awake();
@@ -56,13 +58,13 @@ namespace DungeonCrawl.Actors.Characters
         public override bool OnCollision(Actor anotherActor)
         {
             ApplyDamage(Strength);
-            AudioManager.PlayHitSound("skeleton");
+            AudioManager.Singleton.PlayHitSound("skeleton");
             return false;
         }
 
         protected override void OnDeath()
         {
-            AudioManager.PlayDeathSound("skeleton");
+            AudioManager.Singleton.PlayDeathSound("skeleton");
             Debug.Log("Well, I was already dead anyway...");
         }
 

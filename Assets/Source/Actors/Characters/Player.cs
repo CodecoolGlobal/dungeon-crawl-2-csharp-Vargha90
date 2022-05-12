@@ -11,6 +11,7 @@ namespace DungeonCrawl.Actors.Characters
     public class Player : Character
     {
         public static int getZ = -2;
+        public override char Symbol => 'p';
         public override int DefaultSpriteId => 24;
         public override string DefaultName => "Player";
 
@@ -62,14 +63,19 @@ namespace DungeonCrawl.Actors.Characters
                 Item item = ActorManager.Singleton.GetActorAt<Item>((Position.x, Position.y, -1));
                 if (item != null)
                 {
-                    AudioManager.PlayActionSound("collect");
+                    AudioManager.Singleton.PlayActionSound("collect");
                     ActorManager.Singleton.DestroyActor(item);
                 }
             }
 
-            if (Input.GetKeyDown(KeyCode.K))
+            if (Input.GetKey(KeyCode.K))
             {
                 HandleJson.GetEachActor();
+            }
+
+            if (Input.GetKey(KeyCode.L))
+            {
+                HandleJson.ReadFromJson();
             }
         }
 
@@ -90,7 +96,7 @@ namespace DungeonCrawl.Actors.Characters
 
         protected override void OnDeath()
         {
-            AudioManager.PlayDeathSound("player");
+            AudioManager.Singleton.PlayDeathSound("player");
             UserInterface.Singleton.SetText("Health: 0", UserInterface.TextPosition.TopLeft);
             UserInterface.Singleton.SetText("YOU DIED...", UserInterface.TextPosition.MiddleCenter);
             Debug.Log("Oh no, I'm dead!");

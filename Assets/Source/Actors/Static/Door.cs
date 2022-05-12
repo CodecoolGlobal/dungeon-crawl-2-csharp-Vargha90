@@ -15,6 +15,8 @@ namespace Assets.Source.Actors.Static
 
         public override int Z => -1;
 
+        public override char Symbol => 'd';
+
         public override bool OnCollision(Actor anotherActor)
         {
             if (anotherActor.GetType() == typeof(Player))

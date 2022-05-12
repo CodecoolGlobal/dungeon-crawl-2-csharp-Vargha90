@@ -6,6 +6,8 @@ namespace Assets.Source.Actors.Static
     {
         public override int DefaultSpriteId => 559;
 
+        public override char Symbol => 'k';
+
         public override string DefaultName => "Key";
 
         public static int getZ = -1;

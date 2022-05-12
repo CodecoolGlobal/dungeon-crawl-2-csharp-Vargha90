@@ -6,6 +6,8 @@ namespace Assets.Source.Actors.Static
     {
         public override int DefaultSpriteId => 52;
 
+        public override char Symbol => '+';
+
         public override string DefaultName => "Tree";
 
         public static int getZ = -2;

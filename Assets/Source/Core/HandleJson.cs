@@ -9,23 +9,24 @@ namespace Assets.Source.Core
 {
     public class HandleJson : MonoBehaviour
     {
+        public static int MapId;
         public static int X;
         public static int Y;
         public static int Z;
-        public static string ActorName;
+        public static char ActorSymbol;
 
         public static void GetEachActor()
         {
-            List<Data> ActorList = new List<Data>();
+            ArrayOfData ActorList = new ArrayOfData();
             foreach (Actor actor in ActorManager.Singleton.GetAllActors())
             {
                 X = actor.Position.x;
                 Y = actor.Position.y;
                 Z = actor.Position.z;
-                ActorName = actor.name;
+                ActorSymbol = actor.Symbol;
 
                 Data data = new Data();
-                ActorList.Add(data);
+                ActorList.ActorList.Add(data);
             }
             WriteToFile(ActorList);
         }
@@ -33,22 +34,35 @@ namespace Assets.Source.Core
         [System.Serializable]
         public class Data
         {
+            public int MapId = MapLoader.MapId;
             public int x = X;
             public int y = Y;
             public int z = Z;
-            public string name = ActorName;
+            public char symbol = ActorSymbol;
         }
 
-        public static void WriteToFile(List<Data> ActorList)
+        [System.Serializable]
+        public class ArrayOfData
         {
-            string result = "";
-            foreach (Data actor in ActorList)
-            {
-                string strOutput = JsonUtility.ToJson(actor);
-                result += $"{strOutput}\n";
-            }
+            public List<Data> ActorList;
 
-            File.WriteAllText(Application.dataPath + "/savegame.txt", result);
+            public ArrayOfData()
+            {
+                ActorList = new List<Data>();
+            }
+        }
+
+        private static void WriteToFile(ArrayOfData ActorList)
+        {
+            string strOutput = JsonUtility.ToJson(ActorList, true);
+            File.WriteAllText(Application.dataPath + "/savegame.json", strOutput);
+        }
+
+        public static void ReadFromJson()
+        {
+            string fileText = File.ReadAllText(Application.dataPath + "/savegame.json");
+            ArrayOfData ActorsFromJson = JsonUtility.FromJson<ArrayOfData>(fileText);
+            MapLoader.ReloadState(ActorsFromJson.ActorList);
         }
     }
 }

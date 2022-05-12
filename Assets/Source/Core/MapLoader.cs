@@ -25,17 +25,17 @@ namespace DungeonCrawl.Core
         /// <param name="id"></param>
         public static void LoadMap(int id)
         {
-            AudioManager.StopBGMusic();
-            AudioManager.PlayActionSound("transfer");
+            AudioManager.Singleton.StopBGMusic();
+            AudioManager.Singleton.PlayActionSound("transfer");
             if (id == 1)
             {
-                AudioManager.PlayBGM("level_1");
+                AudioManager.Singleton.PlayBGM("level_1");
             }
             else if (id == 2)
             {
-                AudioManager.PlayBGM("level_2");
-                AudioManager.PlayAmbiante("birds");
-                AudioManager.PlayAmbiante("river");
+                AudioManager.Singleton.PlayBGM("level_2");
+                AudioManager.Singleton.PlayAmbiante("birds");
+                AudioManager.Singleton.PlayAmbiante("river");
             }
             var lines = Regex.Split(Resources.Load<TextAsset>($"map_{id}").text, "\r\n|\r|\n");
 
@@ -68,12 +68,35 @@ namespace DungeonCrawl.Core
             CameraController.Singleton.Position = (_playerPosition.x, _playerPosition.y, _playerPosition.z);
         }
 
+        public static void ReloadState(List<HandleJson.Data> actorList)
+        {
+            AudioManager.Singleton.StopBGMusic();
+            ActorManager.Singleton.DestroyAllActors();
+            foreach (HandleJson.Data data in actorList)
+            {
+                if (data.MapId == 1)
+                {
+                    SpawnActor(data.symbol, (data.x, data.y, data.z));
+                    AudioManager.Singleton.PlayBGM("level_1");
+                }
+                else if (data.MapId == 2)
+                {
+                    SpawnActor2(data.symbol, (data.x, data.y, data.z));
+                    AudioManager.Singleton.PlayBGM("level_2");
+                    AudioManager.Singleton.PlayAmbiante("birds");
+                    AudioManager.Singleton.PlayAmbiante("river");
+                }
+            }
+            CameraController.Singleton.Size = 6;
+            CameraController.Singleton.Position = (_playerPosition.x, _playerPosition.y, _playerPosition.z);
+        }
+
         private static void SetMapId(int id)
         {
             MapId = id;
         }
 
-        private static void SpawnActor(char c, (int x, int y, int z) position)
+        public static void SpawnActor(char c, (int x, int y, int z) position)
         {
             switch (c)
             {

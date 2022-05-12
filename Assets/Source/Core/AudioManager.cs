@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
-    public static AudioClip level1, level2, stoneStep, grassStep, hitSkeleton, hitSpider, deathSkeleton, deathSpider, birds, river, wrongWay, collect, transfer, deathPlayer;
+    public AudioClip level1, level2, stoneStep, grassStep, hitSkeleton, hitSpider, deathSkeleton, deathSpider, birds, river, wrongWay, collect, transfer, deathPlayer;
     static AudioSource audioSrc;
     public static AudioManager Singleton;
 
@@ -38,12 +38,12 @@ public class AudioManager : MonoBehaviour
         audioSrc = GetComponent<AudioSource>();
     }
 
-    public static void StopBGMusic()
+    public void StopBGMusic()
     {
         audioSrc.Stop();
     }
 
-    public static void PlayBGM(string sound)
+    public void PlayBGM(string sound)
     {
         switch (sound)
         {
@@ -57,7 +57,7 @@ public class AudioManager : MonoBehaviour
         
     }
 
-    public static void PlayAmbiante(string sound)
+    public void PlayAmbiante(string sound)
     {
         switch (sound)
         {
@@ -71,7 +71,7 @@ public class AudioManager : MonoBehaviour
 
     }
 
-    public static void PlayStepSound(string floorType)
+    public void PlayStepSound(string floorType)
     {
         if (floorType == "stone")
         {
@@ -83,7 +83,7 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-    public static void PlayActionSound(string actionType)
+    public void PlayActionSound(string actionType)
     {
         switch (actionType)
         {
@@ -96,7 +96,7 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-    public static void PlayHitSound(string enemyType)
+    public void PlayHitSound(string enemyType)
     {
         switch (enemyType)
         {
@@ -109,7 +109,7 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-    public static void PlayDeathSound(string enemyType)
+    public void PlayDeathSound(string enemyType)
     {
         switch (enemyType)
         {
@@ -125,7 +125,7 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-    public static void PlayVocal(string say)
+    public void PlayVocal(string say)
     {
         switch (say)
         {
