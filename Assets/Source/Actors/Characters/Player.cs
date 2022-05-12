@@ -11,7 +11,7 @@ namespace DungeonCrawl.Actors.Characters
     public class Player : Character
     {
         public bool timerRunning = true;
-        private float countdown = 4;
+        private float countdown = 20;
         public static int getZ = -2;
         public override char Symbol => 'p';
         public override int DefaultSpriteId => 24;

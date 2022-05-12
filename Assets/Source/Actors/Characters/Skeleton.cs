@@ -10,7 +10,7 @@ namespace DungeonCrawl.Actors.Characters
 
         public override char Symbol => 's';
 
-        public override int DefaultSpriteId => 23;
+        public override int DefaultSpriteId => 25;
 
         public override string DefaultName => "Skeleton";
 
