@@ -111,7 +111,7 @@ namespace DungeonCrawl.Core
             go.AddComponent<SpriteRenderer>();
 
             var component = go.AddComponent<T>();
-
+            
             go.name = actorName ?? component.DefaultName;
             component.Position = (x, y, z);
             _allActors.Add(component);

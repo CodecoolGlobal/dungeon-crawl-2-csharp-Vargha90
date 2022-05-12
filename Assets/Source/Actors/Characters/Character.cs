@@ -31,6 +31,7 @@ namespace DungeonCrawl.Actors.Characters
         }
 
         protected abstract void OnDeath();
+        protected virtual void OnDeath(string deathMessage) => System.Console.WriteLine("nope");
 
         /// <summary>
         ///     All characters are drawn "above" floor etc

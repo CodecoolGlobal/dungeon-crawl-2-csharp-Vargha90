@@ -32,7 +32,7 @@ namespace DungeonCrawl.Actors.Characters
                 }
                 else
                 {
-                    Debug.Log("Done");
+                    this.OnDeath("DEAD LOLOLO?");
                     timerRunning = false;
                 }
             }
@@ -116,6 +116,11 @@ namespace DungeonCrawl.Actors.Characters
             UserInterface.Singleton.SetText("Health: 0", UserInterface.TextPosition.TopLeft);
             UserInterface.Singleton.SetText("YOU DIED...", UserInterface.TextPosition.MiddleCenter);
             Debug.Log("Oh no, I'm dead!");
+        }
+
+        protected override void OnDeath(string deathMessage)
+        {
+            UserInterface.Singleton.SetText(deathMessage, UserInterface.TextPosition.MiddleCenter);
         }
     }
 }
