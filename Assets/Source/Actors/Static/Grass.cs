@@ -8,6 +8,8 @@ namespace Assets.Source.Actors.Static
         SpriteRenderer sprite;
 
         public static int getZ = 0;
+
+        public override char Symbol => '.';
         public override int DefaultSpriteId => 546;
 
         public override string DefaultName => "Grass";

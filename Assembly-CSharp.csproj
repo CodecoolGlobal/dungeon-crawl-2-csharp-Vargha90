@@ -85,6 +85,8 @@
     <Compile Include="Assets\Source\Actors\Static\Flower.cs" />
     <Compile Include="Assets\Source\Actors\Static\Item.cs" />
     <Compile Include="Assets\Source\Core\ActorManager.cs" />
+    <Compile Include="Assets\Source\Core\HandleJson.cs" />
+    <Compile Include="Assets\Source\Core\Menu.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

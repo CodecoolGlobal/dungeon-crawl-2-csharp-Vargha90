@@ -13,6 +13,8 @@ namespace Assets.Source.Actors.Characters
     internal class Spider : Character
     {
         public static int getZ = -2;
+
+        public override char Symbol => 'b';
         protected override void Awake()
         {
             base.Awake();
@@ -20,8 +22,6 @@ namespace Assets.Source.Actors.Characters
             SetStrength(5);
             InvokeRepeating(nameof(GetDirectionToMove), 0.2f, 0.2f);
         }
-
-        
 
 
         private void GetDirectionToMove()
@@ -123,7 +123,7 @@ namespace Assets.Source.Actors.Characters
 
         public override bool OnCollision(Actor anotherActor)
         {
-            AudioManager.PlayHitSound("spider");
+            AudioManager.Singleton.PlayHitSound("spider");
             ApplyDamage(Strength);
             return false;
         }
