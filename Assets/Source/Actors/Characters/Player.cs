@@ -11,12 +11,18 @@ namespace DungeonCrawl.Actors.Characters
         public static int getZ = -2;
         public override int DefaultSpriteId => 24;
         public override string DefaultName => "Player";
+        public Inventory InventoryObject;
 
         protected override void Awake()
         {
             base.Awake();
             SetHealth(100);
             InvokeRepeating(nameof(Movement), 0.09f, 0.09f);
+            InventoryObject = ScriptableObject.CreateInstance<Inventory>();
+        }
+
+        public void Start()
+        {
         }
 
         protected void Movement()
@@ -60,7 +66,9 @@ namespace DungeonCrawl.Actors.Characters
                 Item item = ActorManager.Singleton.GetActorAt<Item>((Position.x, Position.y, -1));
                 if (item != null)
                 {
+
                     AudioManager.PlayActionSound("collect");
+                    InventoryObject.AddItem(item);
                     ActorManager.Singleton.DestroyActor(item);
                 }
             }
