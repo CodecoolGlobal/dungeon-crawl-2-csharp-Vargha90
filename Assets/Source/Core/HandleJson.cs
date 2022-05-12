@@ -9,10 +9,11 @@ namespace Assets.Source.Core
 {
     public class HandleJson : MonoBehaviour
     {
+        public static int MapId;
         public static int X;
         public static int Y;
         public static int Z;
-        public static string ActorName;
+        public static char ActorSymbol;
 
         public static void GetEachActor()
         {
@@ -22,7 +23,7 @@ namespace Assets.Source.Core
                 X = actor.Position.x;
                 Y = actor.Position.y;
                 Z = actor.Position.z;
-                ActorName = actor.name;
+                ActorSymbol = actor.Symbol;
 
                 Data data = new Data();
                 ActorList.ActorList.Add(data);
@@ -33,10 +34,11 @@ namespace Assets.Source.Core
         [System.Serializable]
         public class Data
         {
+            public int MapId = MapLoader.MapId;
             public int x = X;
             public int y = Y;
             public int z = Z;
-            public string name = ActorName;
+            public char symbol = ActorSymbol;
         }
 
         [System.Serializable]
@@ -53,7 +55,6 @@ namespace Assets.Source.Core
         private static void WriteToFile(ArrayOfData ActorList)
         {
             string strOutput = JsonUtility.ToJson(ActorList, true);
-
             File.WriteAllText(Application.dataPath + "/savegame.json", strOutput);
         }
 
@@ -61,11 +62,7 @@ namespace Assets.Source.Core
         {
             string fileText = File.ReadAllText(Application.dataPath + "/savegame.json");
             ArrayOfData ActorsFromJson = JsonUtility.FromJson<ArrayOfData>(fileText);
-
-            foreach (Data data in ActorsFromJson.ActorList)
-            {
-                Debug.Log(data.name);
-            }
+            MapLoader.ReloadState(ActorsFromJson.ActorList);
         }
     }
 }

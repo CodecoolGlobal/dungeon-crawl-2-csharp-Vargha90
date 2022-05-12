@@ -13,6 +13,8 @@ namespace Assets.Source.Actors.Characters
     internal class Spider : Character
     {
         public static int getZ = -2;
+
+        public override char Symbol => 'b';
         protected override void Awake()
         {
             base.Awake();
@@ -121,14 +123,14 @@ namespace Assets.Source.Actors.Characters
 
         public override bool OnCollision(Actor anotherActor)
         {
-            AudioManager.PlayHitSound("spider");
+            AudioManager.Singleton.PlayHitSound("spider");
             ApplyDamage(Strength);
             return false;
         }
 
         protected override void OnDeath()
         {
-            AudioManager.PlayDeathSound("spider");
+            AudioManager.Singleton.PlayDeathSound("spider");
             Debug.Log("Well, I was already dead anyway...");
         }
 

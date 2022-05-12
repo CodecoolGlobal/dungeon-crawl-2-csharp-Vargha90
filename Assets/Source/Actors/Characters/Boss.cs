@@ -7,6 +7,7 @@ namespace Assets.Source.Actors.Characters
     {
         public static int getZ = -2;
         // 707 for targetPlayer && 708 for PlayerDead
+        public override char Symbol => 'b';
         public override int DefaultSpriteId => 706;
 
         public override string DefaultName => "Boss";

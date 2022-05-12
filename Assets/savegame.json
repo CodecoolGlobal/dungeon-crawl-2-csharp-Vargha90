@@ -1,2206 +1,2573 @@
 {
     "ActorList": [
         {
+            "MapId": 1,
             "x": 0,
             "y": 0,
             "z": -2,
-            "name": "Wall"
+            "symbol": 35
         },
         {
+            "MapId": 1,
             "x": 1,
             "y": 0,
             "z": -2,
-            "name": "Wall"
+            "symbol": 35
         },
         {
+            "MapId": 1,
             "x": 2,
             "y": 0,
             "z": -2,
-            "name": "Wall"
+            "symbol": 35
         },
         {
+            "MapId": 1,
             "x": 3,
             "y": 0,
             "z": -2,
-            "name": "Wall"
+            "symbol": 35
         },
         {
+            "MapId": 1,
             "x": 4,
             "y": 0,
             "z": -2,
-            "name": "Wall"
+            "symbol": 35
         },
         {
+            "MapId": 1,
             "x": 5,
             "y": 0,
             "z": -2,
-            "name": "Wall"
+            "symbol": 35
         },
         {
+            "MapId": 1,
             "x": 6,
             "y": 0,
             "z": -2,
-            "name": "Wall"
+            "symbol": 35
         },
         {
+            "MapId": 1,
             "x": 7,
             "y": 0,
             "z": -2,
-            "name": "Wall"
+            "symbol": 35
         },
         {
+            "MapId": 1,
             "x": 8,
             "y": 0,
             "z": -2,
-            "name": "Wall"
+            "symbol": 35
         },
         {
+            "MapId": 1,
             "x": 9,
             "y": 0,
             "z": -2,
-            "name": "Wall"
+            "symbol": 35
         },
         {
+            "MapId": 1,
             "x": 10,
             "y": 0,
             "z": -2,
-            "name": "Wall"
+            "symbol": 35
         },
         {
+            "MapId": 1,
             "x": 11,
             "y": 0,
             "z": -2,
-            "name": "Wall"
+            "symbol": 35
         },
         {
+            "MapId": 1,
             "x": 12,
             "y": 0,
             "z": -2,
-            "name": "Wall"
+            "symbol": 35
         },
         {
+            "MapId": 1,
             "x": 0,
             "y": -1,
             "z": -2,
-            "name": "Wall"
+            "symbol": 35
         },
         {
+            "MapId": 1,
             "x": 1,
             "y": -1,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 2,
             "y": -1,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 3,
             "y": -1,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 4,
             "y": -1,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 5,
             "y": -1,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 6,
             "y": -1,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 7,
             "y": -1,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 8,
             "y": -1,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 9,
             "y": -1,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 10,
             "y": -1,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 11,
             "y": -1,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 12,
             "y": -1,
             "z": -2,
-            "name": "Wall"
+            "symbol": 35
         },
         {
+            "MapId": 1,
             "x": 17,
             "y": -1,
             "z": -2,
-            "name": "Wall"
+            "symbol": 35
         },
         {
+            "MapId": 1,
             "x": 18,
             "y": -1,
             "z": -2,
-            "name": "Wall"
+            "symbol": 35
         },
         {
+            "MapId": 1,
             "x": 19,
             "y": -1,
             "z": -2,
-            "name": "Wall"
+            "symbol": 35
         },
         {
+            "MapId": 1,
             "x": 20,
             "y": -1,
             "z": -2,
-            "name": "Wall"
+            "symbol": 35
         },
         {
+            "MapId": 1,
             "x": 21,
             "y": -1,
             "z": -2,
-            "name": "Wall"
+            "symbol": 35
         },
         {
+            "MapId": 1,
             "x": 22,
             "y": -1,
             "z": -2,
-            "name": "Wall"
+            "symbol": 35
         },
         {
+            "MapId": 1,
             "x": 23,
             "y": -1,
             "z": -2,
-            "name": "Wall"
+            "symbol": 35
         },
         {
+            "MapId": 1,
             "x": 24,
             "y": -1,
             "z": -2,
-            "name": "Wall"
+            "symbol": 35
         },
         {
+            "MapId": 1,
             "x": 0,
             "y": -2,
             "z": -2,
-            "name": "Wall"
+            "symbol": 35
         },
         {
+            "MapId": 1,
             "x": 1,
             "y": -2,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 2,
             "y": -2,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 3,
             "y": -2,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 4,
             "y": -2,
             "z": -2,
-            "name": "Skeleton"
+            "symbol": 115
         },
         {
+            "MapId": 1,
             "x": 4,
             "y": -2,
             "z": -2,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 5,
             "y": -2,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 6,
             "y": -2,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 7,
             "y": -2,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 8,
             "y": -2,
             "z": -2,
-            "name": "Skeleton"
+            "symbol": 115
         },
         {
+            "MapId": 1,
             "x": 8,
             "y": -2,
             "z": -2,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 9,
             "y": -2,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 10,
             "y": -2,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 11,
             "y": -2,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 12,
             "y": -2,
             "z": -2,
-            "name": "Wall"
+            "symbol": 35
         },
         {
+            "MapId": 1,
             "x": 13,
             "y": -2,
             "z": -2,
-            "name": "Wall"
+            "symbol": 35
         },
         {
+            "MapId": 1,
             "x": 14,
             "y": -2,
             "z": -2,
-            "name": "Wall"
+            "symbol": 35
         },
         {
+            "MapId": 1,
             "x": 15,
             "y": -2,
             "z": -2,
-            "name": "Wall"
+            "symbol": 35
         },
         {
+            "MapId": 1,
             "x": 16,
             "y": -2,
             "z": -2,
-            "name": "Wall"
+            "symbol": 35
         },
         {
+            "MapId": 1,
             "x": 17,
             "y": -2,
             "z": -2,
-            "name": "Wall"
+            "symbol": 35
         },
         {
+            "MapId": 1,
             "x": 18,
             "y": -2,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 19,
             "y": -2,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 20,
             "y": -2,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 21,
             "y": -2,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 22,
             "y": -2,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 23,
             "y": -2,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 24,
             "y": -2,
             "z": -2,
-            "name": "Wall"
+            "symbol": 35
         },
         {
+            "MapId": 1,
             "x": 0,
             "y": -3,
             "z": -2,
-            "name": "Wall"
+            "symbol": 35
         },
         {
+            "MapId": 1,
             "x": 1,
             "y": -3,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 2,
             "y": -3,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 3,
             "y": -3,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 4,
             "y": -3,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 5,
             "y": -3,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 6,
             "y": -3,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 7,
             "y": -3,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 8,
             "y": -3,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 9,
             "y": -3,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 10,
             "y": -3,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 11,
             "y": -3,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 12,
             "y": -3,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 13,
             "y": -3,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 14,
             "y": -3,
             "z": -1,
-            "name": "Key"
+            "symbol": 107
         },
         {
+            "MapId": 1,
             "x": 14,
             "y": -3,
             "z": -1,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 15,
             "y": -3,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 16,
             "y": -3,
             "z": 0,
-            "name": "Door"
+            "symbol": 100
         },
         {
+            "MapId": 1,
             "x": 16,
             "y": -3,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 17,
             "y": -3,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 18,
             "y": -3,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 19,
             "y": -3,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 20,
             "y": -3,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 21,
             "y": -3,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 22,
             "y": -3,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 23,
             "y": -3,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 24,
             "y": -3,
             "z": -2,
-            "name": "Wall"
+            "symbol": 35
         },
         {
+            "MapId": 1,
             "x": 0,
             "y": -4,
             "z": -2,
-            "name": "Wall"
+            "symbol": 35
         },
         {
+            "MapId": 1,
             "x": 1,
             "y": -4,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 2,
             "y": -4,
             "z": -1,
-            "name": "Chunk of Meat"
+            "symbol": 109
         },
         {
+            "MapId": 1,
             "x": 2,
             "y": -4,
             "z": -1,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 3,
             "y": -4,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 4,
             "y": -4,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 5,
             "y": -4,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 6,
             "y": -4,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 7,
             "y": -4,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 8,
             "y": -4,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 9,
             "y": -4,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 10,
             "y": -4,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 11,
             "y": -4,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 12,
             "y": -4,
             "z": -2,
-            "name": "Wall"
+            "symbol": 35
         },
         {
+            "MapId": 1,
             "x": 13,
             "y": -4,
             "z": -2,
-            "name": "Wall"
+            "symbol": 35
         },
         {
+            "MapId": 1,
             "x": 14,
             "y": -4,
             "z": -2,
-            "name": "Wall"
+            "symbol": 35
         },
         {
+            "MapId": 1,
             "x": 15,
             "y": -4,
             "z": -2,
-            "name": "Wall"
+            "symbol": 35
         },
         {
+            "MapId": 1,
             "x": 16,
             "y": -4,
             "z": -2,
-            "name": "Wall"
+            "symbol": 35
         },
         {
+            "MapId": 1,
             "x": 17,
             "y": -4,
             "z": -2,
-            "name": "Wall"
+            "symbol": 35
         },
         {
+            "MapId": 1,
             "x": 18,
             "y": -4,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 19,
             "y": -4,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 20,
             "y": -4,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 21,
             "y": -4,
             "z": -1,
-            "name": "Chunk of Meat"
+            "symbol": 109
         },
         {
+            "MapId": 1,
             "x": 21,
             "y": -4,
             "z": -1,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 22,
             "y": -4,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 23,
             "y": -4,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 24,
             "y": -4,
             "z": -2,
-            "name": "Wall"
+            "symbol": 35
         },
         {
+            "MapId": 1,
             "x": 0,
             "y": -5,
             "z": -2,
-            "name": "Wall"
+            "symbol": 35
         },
         {
+            "MapId": 1,
             "x": 1,
             "y": -5,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 2,
             "y": -5,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 3,
             "y": -5,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 4,
             "y": -5,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 5,
             "y": -5,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 6,
             "y": -5,
             "z": -2,
-            "name": "Skeleton"
+            "symbol": 115
         },
         {
+            "MapId": 1,
             "x": 6,
             "y": -5,
             "z": -2,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 7,
             "y": -5,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 8,
             "y": -5,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 9,
             "y": -5,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 10,
             "y": -5,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 11,
             "y": -5,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 12,
             "y": -5,
             "z": -2,
-            "name": "Wall"
+            "symbol": 35
         },
         {
+            "MapId": 1,
             "x": 17,
             "y": -5,
             "z": -2,
-            "name": "Wall"
+            "symbol": 35
         },
         {
+            "MapId": 1,
             "x": 18,
             "y": -5,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 19,
             "y": -5,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 20,
             "y": -5,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 21,
             "y": -5,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 22,
             "y": -5,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 23,
             "y": -5,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 24,
             "y": -5,
             "z": -2,
-            "name": "Wall"
+            "symbol": 35
         },
         {
+            "MapId": 1,
             "x": 0,
             "y": -6,
             "z": -2,
-            "name": "Wall"
+            "symbol": 35
         },
         {
+            "MapId": 1,
             "x": 1,
             "y": -6,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 2,
             "y": -6,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 3,
             "y": -6,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 4,
             "y": -6,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 5,
             "y": -6,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 6,
             "y": -6,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 7,
             "y": -6,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 8,
             "y": -6,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 9,
             "y": -6,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 10,
             "y": -6,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 11,
             "y": -6,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 12,
             "y": -6,
             "z": -2,
-            "name": "Wall"
+            "symbol": 35
         },
         {
+            "MapId": 1,
             "x": 17,
             "y": -6,
             "z": -2,
-            "name": "Wall"
+            "symbol": 35
         },
         {
+            "MapId": 1,
             "x": 18,
             "y": -6,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 19,
             "y": -6,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 20,
             "y": -6,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
-            "x": 23,
-            "y": -7,
+            "MapId": 1,
+            "x": 20,
+            "y": -6,
             "z": -2,
-            "name": "Spider"
+            "symbol": 98
         },
         {
+            "MapId": 1,
             "x": 21,
             "y": -6,
             "z": -2,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 22,
             "y": -6,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 23,
             "y": -6,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 24,
             "y": -6,
             "z": -2,
-            "name": "Wall"
+            "symbol": 35
         },
         {
+            "MapId": 1,
             "x": 0,
             "y": -7,
             "z": -2,
-            "name": "Wall"
+            "symbol": 35
         },
         {
+            "MapId": 1,
             "x": 1,
             "y": -7,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 2,
             "y": -7,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 3,
             "y": -7,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 4,
             "y": -7,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 5,
             "y": -7,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 6,
             "y": -7,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 7,
             "y": -7,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 8,
             "y": -7,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 9,
             "y": -7,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 10,
             "y": -7,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 11,
             "y": -7,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 12,
             "y": -7,
             "z": -2,
-            "name": "Wall"
+            "symbol": 35
         },
         {
+            "MapId": 1,
             "x": 17,
             "y": -7,
             "z": -2,
-            "name": "Wall"
+            "symbol": 35
         },
         {
+            "MapId": 1,
             "x": 18,
             "y": -7,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 19,
             "y": -7,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 20,
             "y": -7,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 21,
             "y": -7,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 22,
             "y": -7,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 23,
             "y": -7,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 24,
             "y": -7,
             "z": -2,
-            "name": "Wall"
+            "symbol": 35
         },
         {
+            "MapId": 1,
             "x": 0,
             "y": -8,
             "z": -2,
-            "name": "Wall"
+            "symbol": 35
         },
         {
+            "MapId": 1,
             "x": 1,
             "y": -8,
             "z": -2,
-            "name": "Wall"
+            "symbol": 35
         },
         {
+            "MapId": 1,
             "x": 2,
             "y": -8,
             "z": -2,
-            "name": "Wall"
+            "symbol": 35
         },
         {
+            "MapId": 1,
             "x": 3,
             "y": -8,
             "z": -2,
-            "name": "Wall"
+            "symbol": 35
         },
         {
+            "MapId": 1,
             "x": 4,
             "y": -8,
             "z": -2,
-            "name": "Wall"
+            "symbol": 35
         },
         {
+            "MapId": 1,
             "x": 5,
             "y": -8,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 6,
             "y": -8,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 7,
             "y": -8,
             "z": -2,
-            "name": "Wall"
+            "symbol": 35
         },
         {
+            "MapId": 1,
             "x": 8,
             "y": -8,
             "z": -2,
-            "name": "Wall"
+            "symbol": 35
         },
         {
+            "MapId": 1,
             "x": 9,
             "y": -8,
             "z": -2,
-            "name": "Wall"
+            "symbol": 35
         },
         {
+            "MapId": 1,
             "x": 10,
             "y": -8,
             "z": -2,
-            "name": "Wall"
+            "symbol": 35
         },
         {
+            "MapId": 1,
             "x": 11,
             "y": -8,
             "z": -2,
-            "name": "Wall"
+            "symbol": 35
         },
         {
+            "MapId": 1,
             "x": 12,
             "y": -8,
             "z": -2,
-            "name": "Wall"
+            "symbol": 35
         },
         {
+            "MapId": 1,
             "x": 17,
             "y": -8,
             "z": -2,
-            "name": "Wall"
+            "symbol": 35
         },
         {
+            "MapId": 1,
             "x": 18,
             "y": -8,
             "z": -2,
-            "name": "Wall"
+            "symbol": 35
         },
         {
+            "MapId": 1,
             "x": 19,
             "y": -8,
             "z": -2,
-            "name": "Wall"
+            "symbol": 35
         },
         {
+            "MapId": 1,
             "x": 20,
             "y": -8,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 21,
             "y": -8,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 22,
             "y": -8,
             "z": -2,
-            "name": "Wall"
+            "symbol": 35
         },
         {
+            "MapId": 1,
             "x": 23,
             "y": -8,
             "z": -2,
-            "name": "Wall"
+            "symbol": 35
         },
         {
+            "MapId": 1,
             "x": 24,
             "y": -8,
             "z": -2,
-            "name": "Wall"
+            "symbol": 35
         },
         {
+            "MapId": 1,
             "x": 4,
             "y": -9,
             "z": -2,
-            "name": "Wall"
+            "symbol": 35
         },
         {
+            "MapId": 1,
             "x": 5,
             "y": -9,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 6,
             "y": -9,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 7,
             "y": -9,
             "z": -2,
-            "name": "Wall"
+            "symbol": 35
         },
         {
+            "MapId": 1,
             "x": 19,
             "y": -9,
             "z": -2,
-            "name": "Wall"
+            "symbol": 35
         },
         {
+            "MapId": 1,
             "x": 20,
             "y": -9,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 21,
             "y": -9,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 22,
             "y": -9,
             "z": -2,
-            "name": "Wall"
+            "symbol": 35
         },
         {
+            "MapId": 1,
             "x": 4,
             "y": -10,
             "z": -2,
-            "name": "Wall"
+            "symbol": 35
         },
         {
+            "MapId": 1,
             "x": 5,
             "y": -10,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 6,
             "y": -10,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 7,
             "y": -10,
             "z": -2,
-            "name": "Wall"
+            "symbol": 35
         },
         {
+            "MapId": 1,
             "x": 19,
             "y": -10,
             "z": -2,
-            "name": "Wall"
+            "symbol": 35
         },
         {
+            "MapId": 1,
             "x": 20,
             "y": -10,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 21,
             "y": -10,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 22,
             "y": -10,
             "z": -2,
-            "name": "Wall"
+            "symbol": 35
         },
         {
+            "MapId": 1,
             "x": 4,
             "y": -11,
             "z": -2,
-            "name": "Wall"
+            "symbol": 35
         },
         {
+            "MapId": 1,
             "x": 5,
             "y": -11,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 6,
             "y": -11,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 7,
             "y": -11,
             "z": -2,
-            "name": "Wall"
+            "symbol": 35
         },
         {
+            "MapId": 1,
             "x": 17,
             "y": -11,
             "z": -2,
-            "name": "Wall"
+            "symbol": 35
         },
         {
+            "MapId": 1,
             "x": 18,
             "y": -11,
             "z": -2,
-            "name": "Wall"
+            "symbol": 35
         },
         {
+            "MapId": 1,
             "x": 19,
             "y": -11,
             "z": -2,
-            "name": "Wall"
+            "symbol": 35
         },
         {
+            "MapId": 1,
             "x": 20,
             "y": -11,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 21,
             "y": -11,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 22,
             "y": -11,
             "z": -2,
-            "name": "Wall"
+            "symbol": 35
         },
         {
+            "MapId": 1,
             "x": 23,
             "y": -11,
             "z": -2,
-            "name": "Wall"
+            "symbol": 35
         },
         {
+            "MapId": 1,
             "x": 24,
             "y": -11,
             "z": -2,
-            "name": "Wall"
+            "symbol": 35
         },
         {
+            "MapId": 1,
             "x": 2,
             "y": -12,
             "z": -2,
-            "name": "Wall"
+            "symbol": 35
         },
         {
+            "MapId": 1,
             "x": 3,
             "y": -12,
             "z": -2,
-            "name": "Wall"
+            "symbol": 35
         },
         {
+            "MapId": 1,
             "x": 4,
             "y": -12,
             "z": -2,
-            "name": "Wall"
+            "symbol": 35
         },
         {
+            "MapId": 1,
             "x": 5,
             "y": -12,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 6,
             "y": -12,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 7,
             "y": -12,
             "z": -2,
-            "name": "Wall"
+            "symbol": 35
         },
         {
+            "MapId": 1,
             "x": 8,
             "y": -12,
             "z": -2,
-            "name": "Wall"
+            "symbol": 35
         },
         {
+            "MapId": 1,
             "x": 9,
             "y": -12,
             "z": -2,
-            "name": "Wall"
+            "symbol": 35
         },
         {
+            "MapId": 1,
             "x": 10,
             "y": -12,
             "z": -2,
-            "name": "Wall"
+            "symbol": 35
         },
         {
+            "MapId": 1,
             "x": 17,
             "y": -12,
             "z": -2,
-            "name": "Wall"
+            "symbol": 35
         },
         {
+            "MapId": 1,
             "x": 18,
             "y": -12,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 19,
             "y": -12,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 20,
             "y": -12,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 21,
             "y": -12,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 22,
             "y": -12,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 23,
             "y": -12,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 24,
             "y": -12,
             "z": -2,
-            "name": "Wall"
+            "symbol": 35
         },
         {
+            "MapId": 1,
             "x": 2,
             "y": -13,
             "z": -2,
-            "name": "Wall"
+            "symbol": 35
         },
         {
+            "MapId": 1,
             "x": 3,
             "y": -13,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 4,
             "y": -13,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 6,
-            "y": -14,
+            "y": -8,
             "z": -2,
-            "name": "Player"
+            "symbol": 112
         },
         {
+            "MapId": 1,
             "x": 5,
             "y": -13,
             "z": -2,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 6,
             "y": -13,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 7,
             "y": -13,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 8,
             "y": -13,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 9,
             "y": -13,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 10,
             "y": -13,
             "z": -2,
-            "name": "Wall"
+            "symbol": 35
         },
         {
+            "MapId": 1,
             "x": 17,
             "y": -13,
             "z": -2,
-            "name": "Wall"
+            "symbol": 35
         },
         {
+            "MapId": 1,
             "x": 18,
             "y": -13,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 19,
             "y": -13,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 20,
             "y": -13,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 21,
             "y": -13,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 22,
             "y": -13,
             "z": -1,
-            "name": "Chunk of Meat"
+            "symbol": 109
         },
         {
+            "MapId": 1,
             "x": 22,
             "y": -13,
             "z": -1,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 23,
             "y": -13,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 24,
             "y": -13,
             "z": -2,
-            "name": "Wall"
+            "symbol": 35
         },
         {
+            "MapId": 1,
             "x": 2,
             "y": -14,
             "z": -2,
-            "name": "Wall"
+            "symbol": 35
         },
         {
+            "MapId": 1,
             "x": 3,
             "y": -14,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 4,
             "y": -14,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 5,
             "y": -14,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 6,
             "y": -14,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 7,
             "y": -14,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 8,
             "y": -14,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 9,
             "y": -14,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 10,
             "y": -14,
             "z": -2,
-            "name": "Wall"
+            "symbol": 35
         },
         {
+            "MapId": 1,
             "x": 17,
             "y": -14,
             "z": -2,
-            "name": "Wall"
+            "symbol": 35
         },
         {
+            "MapId": 1,
             "x": 18,
             "y": -14,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 19,
             "y": -14,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 20,
             "y": -14,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 21,
             "y": -14,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 22,
             "y": -14,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 23,
             "y": -14,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 24,
             "y": -14,
             "z": -2,
-            "name": "Wall"
+            "symbol": 35
         },
         {
+            "MapId": 1,
             "x": 2,
             "y": -15,
             "z": -2,
-            "name": "Wall"
+            "symbol": 35
         },
         {
+            "MapId": 1,
             "x": 3,
             "y": -15,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 4,
             "y": -15,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 5,
             "y": -15,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 6,
             "y": -15,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 7,
             "y": -15,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 8,
             "y": -15,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 9,
             "y": -15,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 10,
             "y": -15,
             "z": -2,
-            "name": "Wall"
+            "symbol": 35
         },
         {
+            "MapId": 1,
             "x": 17,
             "y": -15,
             "z": -2,
-            "name": "Wall"
+            "symbol": 35
         },
         {
+            "MapId": 1,
             "x": 18,
             "y": -15,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 19,
             "y": -15,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 20,
             "y": -15,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 21,
             "y": -15,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 22,
             "y": -15,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 23,
             "y": -15,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 24,
             "y": -15,
             "z": -2,
-            "name": "Wall"
+            "symbol": 35
         },
         {
+            "MapId": 1,
             "x": 2,
             "y": -16,
             "z": -2,
-            "name": "Wall"
+            "symbol": 35
         },
         {
+            "MapId": 1,
             "x": 3,
             "y": -16,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 4,
             "y": -16,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 5,
             "y": -16,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 6,
             "y": -16,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 7,
             "y": -16,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 8,
             "y": -16,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 9,
             "y": -16,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 10,
             "y": -16,
             "z": -2,
-            "name": "Wall"
+            "symbol": 35
         },
         {
+            "MapId": 1,
             "x": 17,
             "y": -16,
             "z": -2,
-            "name": "Wall"
+            "symbol": 35
         },
         {
+            "MapId": 1,
             "x": 18,
             "y": -16,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 19,
             "y": -16,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 20,
             "y": -16,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 21,
             "y": -16,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 22,
             "y": -16,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 23,
             "y": -16,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 24,
             "y": -16,
             "z": -2,
-            "name": "Wall"
+            "symbol": 35
         },
         {
+            "MapId": 1,
             "x": 2,
             "y": -17,
             "z": -2,
-            "name": "Wall"
+            "symbol": 35
         },
         {
+            "MapId": 1,
             "x": 3,
             "y": -17,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 4,
             "y": -17,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 5,
             "y": -17,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 6,
             "y": -17,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 7,
             "y": -17,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 8,
             "y": -17,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 9,
             "y": -17,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 10,
             "y": -17,
             "z": -2,
-            "name": "Wall"
+            "symbol": 35
         },
         {
+            "MapId": 1,
             "x": 17,
             "y": -17,
             "z": -2,
-            "name": "Wall"
+            "symbol": 35
         },
         {
+            "MapId": 1,
             "x": 18,
             "y": -17,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 19,
             "y": -17,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 20,
             "y": -17,
             "z": -2,
-            "name": "Stairs"
+            "symbol": 103
         },
         {
+            "MapId": 1,
             "x": 21,
             "y": -17,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 22,
             "y": -17,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 23,
             "y": -17,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 24,
             "y": -17,
             "z": -2,
-            "name": "Wall"
+            "symbol": 35
         },
         {
+            "MapId": 1,
             "x": 2,
             "y": -18,
             "z": -2,
-            "name": "Wall"
+            "symbol": 35
         },
         {
+            "MapId": 1,
             "x": 3,
             "y": -18,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 4,
             "y": -18,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 5,
             "y": -18,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 6,
             "y": -18,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 7,
             "y": -18,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 8,
             "y": -18,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 9,
             "y": -18,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 10,
             "y": -18,
             "z": -2,
-            "name": "Wall"
+            "symbol": 35
         },
         {
+            "MapId": 1,
             "x": 17,
             "y": -18,
             "z": -2,
-            "name": "Wall"
+            "symbol": 35
         },
         {
+            "MapId": 1,
             "x": 18,
             "y": -18,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 19,
             "y": -18,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 20,
             "y": -18,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 21,
             "y": -18,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 22,
             "y": -18,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 23,
             "y": -18,
             "z": 0,
-            "name": "Floor"
+            "symbol": 46
         },
         {
+            "MapId": 1,
             "x": 24,
             "y": -18,
             "z": -2,
-            "name": "Wall"
+            "symbol": 35
         },
         {
+            "MapId": 1,
             "x": 2,
             "y": -19,
             "z": -2,
-            "name": "Wall"
+            "symbol": 35
         },
         {
+            "MapId": 1,
             "x": 3,
             "y": -19,
             "z": -2,
-            "name": "Wall"
+            "symbol": 35
         },
         {
+            "MapId": 1,
             "x": 4,
             "y": -19,
             "z": -2,
-            "name": "Wall"
+            "symbol": 35
         },
         {
+            "MapId": 1,
             "x": 5,
             "y": -19,
             "z": -2,
-            "name": "Wall"
+            "symbol": 35
         },
         {
+            "MapId": 1,
             "x": 6,
             "y": -19,
             "z": -2,
-            "name": "Wall"
+            "symbol": 35
         },
         {
+            "MapId": 1,
             "x": 7,
             "y": -19,
             "z": -2,
-            "name": "Wall"
+            "symbol": 35
         },
         {
+            "MapId": 1,
             "x": 8,
             "y": -19,
             "z": -2,
-            "name": "Wall"
+            "symbol": 35
         },
         {
+            "MapId": 1,
             "x": 9,
             "y": -19,
             "z": -2,
-            "name": "Wall"
+            "symbol": 35
         },
         {
+            "MapId": 1,
             "x": 10,
             "y": -19,
             "z": -2,
-            "name": "Wall"
+            "symbol": 35
         },
         {
+            "MapId": 1,
             "x": 17,
             "y": -19,
             "z": -2,
-            "name": "Wall"
+            "symbol": 35
         },
         {
+            "MapId": 1,
             "x": 18,
             "y": -19,
             "z": -2,
-            "name": "Wall"
+            "symbol": 35
         },
         {
+            "MapId": 1,
             "x": 19,
             "y": -19,
             "z": -2,
-            "name": "Wall"
+            "symbol": 35
         },
         {
+            "MapId": 1,
             "x": 20,
             "y": -19,
             "z": -2,
-            "name": "Wall"
+            "symbol": 35
         },
         {
+            "MapId": 1,
             "x": 21,
             "y": -19,
             "z": -2,
-            "name": "Wall"
+            "symbol": 35
         },
         {
+            "MapId": 1,
             "x": 22,
             "y": -19,
             "z": -2,
-            "name": "Wall"
+            "symbol": 35
         },
         {
+            "MapId": 1,
             "x": 23,
             "y": -19,
             "z": -2,
-            "name": "Wall"
+            "symbol": 35
         },
         {
+            "MapId": 1,
             "x": 24,
             "y": -19,
             "z": -2,
-            "name": "Wall"
+            "symbol": 35
         }
     ]
 }
